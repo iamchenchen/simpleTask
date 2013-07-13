@@ -17,7 +17,6 @@
 		3CAECC861791DBDA0000F471 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC851791DBDA0000F471 /* Default@2x.png */; };
 		3CAECC881791DBDA0000F471 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC871791DBDA0000F471 /* Default-568h@2x.png */; };
 		3CAECC8B1791DBDB0000F471 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */; };
-		3CAECC8E1791DBDB0000F471 /* iDCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECC8D1791DBDB0000F471 /* iDCViewController.m */; };
 		3CAECC981791E17E0000F471 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC971791E17E0000F471 /* MobileCoreServices.framework */; };
 		3CAECC9A1791E1890000F471 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC991791E1890000F471 /* Security.framework */; };
 		3CAECC9C1791E1920000F471 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC9B1791E1920000F471 /* CoreLocation.framework */; };
@@ -77,6 +76,8 @@
 		3CAECD541791F39B0000F471 /* sliderMinTrack_.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD271791F39B0000F471 /* sliderMinTrack_.png */; };
 		3CAECD551791F39B0000F471 /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD281791F39B0000F471 /* sliderThumb.png */; };
 		3CAECD561791F39B0000F471 /* sliderThumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD291791F39B0000F471 /* sliderThumb@2x.png */; };
+		3CAECD591792026E0000F471 /* iDCSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD581792026E0000F471 /* iDCSignUpViewController.m */; };
+		3CAECD5C1792092D0000F471 /* iDCTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD5B1792092D0000F471 /* iDCTasksViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,8 +95,6 @@
 		3CAECC851791DBDA0000F471 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3CAECC871791DBDA0000F471 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3CAECC8A1791DBDB0000F471 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		3CAECC8C1791DBDB0000F471 /* iDCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iDCViewController.h; sourceTree = "<group>"; };
-		3CAECC8D1791DBDB0000F471 /* iDCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDCViewController.m; sourceTree = "<group>"; };
 		3CAECC971791E17E0000F471 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3CAECC991791E1890000F471 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3CAECC9B1791E1920000F471 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -212,6 +211,10 @@
 		3CAECD271791F39B0000F471 /* sliderMinTrack_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderMinTrack_.png; sourceTree = "<group>"; };
 		3CAECD281791F39B0000F471 /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
 		3CAECD291791F39B0000F471 /* sliderThumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderThumb@2x.png"; sourceTree = "<group>"; };
+		3CAECD571792026E0000F471 /* iDCSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCSignUpViewController.h; path = View/iDCSignUpViewController.h; sourceTree = "<group>"; };
+		3CAECD581792026E0000F471 /* iDCSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCSignUpViewController.m; path = View/iDCSignUpViewController.m; sourceTree = "<group>"; };
+		3CAECD5A1792092D0000F471 /* iDCTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCTasksViewController.h; path = View/iDCTasksViewController.h; sourceTree = SOURCE_ROOT; };
+		3CAECD5B1792092D0000F471 /* iDCTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCTasksViewController.m; path = View/iDCTasksViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,8 +281,8 @@
 				3CAECC801791DBDA0000F471 /* iDCAppDelegate.h */,
 				3CAECC811791DBDA0000F471 /* iDCAppDelegate.m */,
 				3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */,
-				3CAECC8C1791DBDB0000F471 /* iDCViewController.h */,
-				3CAECC8D1791DBDB0000F471 /* iDCViewController.m */,
+				3CAECD5A1792092D0000F471 /* iDCTasksViewController.h */,
+				3CAECD5B1792092D0000F471 /* iDCTasksViewController.m */,
 				3CAECC781791DBDA0000F471 /* Supporting Files */,
 			);
 			path = simpleTask;
@@ -399,6 +402,8 @@
 			children = (
 				3CAECCEB1791EFA10000F471 /* iDCLoginViewController.h */,
 				3CAECCEC1791EFA10000F471 /* iDCLoginViewController.m */,
+				3CAECD571792026E0000F471 /* iDCSignUpViewController.h */,
+				3CAECD581792026E0000F471 /* iDCSignUpViewController.m */,
 			);
 			name = View;
 			path = ..;
@@ -608,7 +613,6 @@
 			files = (
 				3CAECC7E1791DBDA0000F471 /* main.m in Sources */,
 				3CAECC821791DBDA0000F471 /* iDCAppDelegate.m in Sources */,
-				3CAECC8E1791DBDB0000F471 /* iDCViewController.m in Sources */,
 				3CAECCDD1791E7460000F471 /* simpleTaskData.xcdatamodeld in Sources */,
 				3CAECCE71791ECA90000F471 /* User.m in Sources */,
 				3CAECCEA1791ECA90000F471 /* Task.m in Sources */,
@@ -616,6 +620,8 @@
 				3CAECCF91791F2BC0000F471 /* ADVDefaultTheme.m in Sources */,
 				3CAECCFA1791F2BC0000F471 /* ADVFitpulseTheme.m in Sources */,
 				3CAECCFB1791F2BC0000F471 /* ADVTheme.m in Sources */,
+				3CAECD591792026E0000F471 /* iDCSignUpViewController.m in Sources */,
+				3CAECD5C1792092D0000F471 /* iDCTasksViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import "ADVTheme.h"
 #import "iDCAppDelegate.h"
 #import "StackMob.h"
+#import "iDCSignUpViewController.h"
 
 
 @interface iDCLoginViewController ()
@@ -95,7 +96,7 @@
       NSLog(@"Logged in");
     }
     
-    [self performSegueWithIdentifier:@"list" sender:self];
+    [self performSegueWithIdentifier:@"afterSignIn" sender:self];
     
   } onFailure:^(NSError *error) {
     //Something bad has ocurred

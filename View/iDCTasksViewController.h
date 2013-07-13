@@ -1,5 +1,5 @@
 //
-//  iDCViewController.h
+//  iDCTasksViewController.h
 //  simpleTask
 //
 //  Created by Chenchen Zheng on 7/13/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface iDCViewController : UIViewController
+@interface iDCTasksViewController : UIViewController
 
 @end

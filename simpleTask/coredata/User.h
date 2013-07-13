@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "StackMob.h"
 
 @class Task;
 
-@interface User : NSManagedObject
+@interface User : SMUserManagedObject
 
 @property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSSet *tasks;
@@ -23,5 +24,7 @@
 - (void)removeTasksObject:(Task *)value;
 - (void)addTasks:(NSSet *)values;
 - (void)removeTasks:(NSSet *)values;
+
+- (id)initIntoManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end

@@ -15,4 +15,15 @@
 @dynamic username;
 @dynamic tasks;
 
+- (id)initIntoManagedObjectContext:(NSManagedObjectContext *)context {
+  NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
+  self = [super initWithEntity:entity insertIntoManagedObjectContext:context];
+  
+  if (self) {
+    // assign local variables and do other init stuff here
+  }
+  
+  return self;
+}
+
 @end
