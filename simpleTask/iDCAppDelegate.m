@@ -11,14 +11,31 @@
 
 #define STACK_MOB_DEV_PUBLIC_KEY @"e92699ac-7895-4fcd-8e04-a94e9f45e4f8"
 #define STACK_MOB_PRD_PUBLIC_KEY @"28e0d803-dea0-40fc-bdac-1b820d4d5483"
+
+@interface iDCAppDelegate ()
+
+@property (strong, nonatomic) SMClient *client;
+@end
+
 @implementation iDCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+  self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:STACK_MOB_DEV_PUBLIC_KEY];
+
+  return YES;
 }
-							
+
+- (NSManagedObjectModel *)managedObjectModel
+{
+  if (_managedObjectModel != nil) {
+    return _managedObjectModel;
+  }
+  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"simpleTask" withExtension:@"momd"];
+  _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+  return _managedObjectModel;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

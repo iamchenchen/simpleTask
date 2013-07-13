@@ -25,6 +25,9 @@
 		3CAECCA01791E1AE0000F471 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC9F1791E1AE0000F471 /* CoreData.framework */; };
 		3CAECCD91791E2A80000F471 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECCA21791E2A80000F471 /* CHANGELOG.md */; };
 		3CAECCDA1791E2A80000F471 /* libstackmob-v2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECCD81791E2A80000F471 /* libstackmob-v2.0.0.a */; };
+		3CAECCDD1791E7460000F471 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECCDB1791E7460000F471 /* Model.xcdatamodeld */; };
+		3CAECCE71791ECA90000F471 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECCE61791ECA90000F471 /* User.m */; };
+		3CAECCEA1791ECA90000F471 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECCE91791ECA90000F471 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,11 @@
 		3CAECCD61791E2A80000F471 /* Synchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronization.h; sourceTree = "<group>"; };
 		3CAECCD71791E2A80000F471 /* SystemInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInformation.h; sourceTree = "<group>"; };
 		3CAECCD81791E2A80000F471 /* libstackmob-v2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libstackmob-v2.0.0.a"; sourceTree = "<group>"; };
+		3CAECCDC1791E7460000F471 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		3CAECCE51791ECA90000F471 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = coredata/User.h; sourceTree = "<group>"; };
+		3CAECCE61791ECA90000F471 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = coredata/User.m; sourceTree = "<group>"; };
+		3CAECCE81791ECA90000F471 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = coredata/Task.h; sourceTree = "<group>"; };
+		3CAECCE91791ECA90000F471 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = coredata/Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,7 @@
 		3CAECC771791DBDA0000F471 /* simpleTask */ = {
 			isa = PBXGroup;
 			children = (
+				3CAECCDE1791E74E0000F471 /* coredata */,
 				3CAECC801791DBDA0000F471 /* iDCAppDelegate.h */,
 				3CAECC811791DBDA0000F471 /* iDCAppDelegate.m */,
 				3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */,
@@ -268,6 +277,18 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		3CAECCDE1791E74E0000F471 /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				3CAECCDB1791E7460000F471 /* Model.xcdatamodeld */,
+				3CAECCE81791ECA90000F471 /* Task.h */,
+				3CAECCE91791ECA90000F471 /* Task.m */,
+				3CAECCE51791ECA90000F471 /* User.h */,
+				3CAECCE61791ECA90000F471 /* User.m */,
+			);
+			name = coredata;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +360,9 @@
 				3CAECC7E1791DBDA0000F471 /* main.m in Sources */,
 				3CAECC821791DBDA0000F471 /* iDCAppDelegate.m in Sources */,
 				3CAECC8E1791DBDB0000F471 /* iDCViewController.m in Sources */,
+				3CAECCDD1791E7460000F471 /* Model.xcdatamodeld in Sources */,
+				3CAECCE71791ECA90000F471 /* User.m in Sources */,
+				3CAECCEA1791ECA90000F471 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +452,6 @@
 				INFOPLIST_FILE = "simpleTask/simpleTask-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/simpleTask/3rd party libraries/StackMob-v2.0.0\"",
 					"\"$(SRCROOT)/StackMob-v2.0.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -445,7 +468,6 @@
 				INFOPLIST_FILE = "simpleTask/simpleTask-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/simpleTask/3rd party libraries/StackMob-v2.0.0\"",
 					"\"$(SRCROOT)/StackMob-v2.0.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -475,6 +497,20 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3CAECCDB1791E7460000F471 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3CAECCDC1791E7460000F471 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3CAECCDC1791E7460000F471 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = coredata/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3CAECC661791DBDA0000F471 /* Project object */;
 }
