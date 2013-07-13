@@ -8,6 +8,8 @@
 
 #import "iDCAppDelegate.h"
 #import "StackMob.h"
+//Theme...
+#import "ADVTheme.h"
 
 #define STACK_MOB_DEV_PUBLIC_KEY @"e92699ac-7895-4fcd-8e04-a94e9f45e4f8"
 #define STACK_MOB_PRD_PUBLIC_KEY @"28e0d803-dea0-40fc-bdac-1b820d4d5483"
@@ -21,8 +23,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [ADVThemeManager customizeAppAppearance];
+  
   self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:STACK_MOB_DEV_PUBLIC_KEY];
-
+  self.coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
+  
   return YES;
 }
 
@@ -30,8 +35,8 @@
 {
   if (_managedObjectModel != nil) {
     return _managedObjectModel;
-  }
-  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"simpleTask" withExtension:@"momd"];
+  }  
+  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"simpleTaskData" withExtension:@"momd"];
   _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
   return _managedObjectModel;
 }
