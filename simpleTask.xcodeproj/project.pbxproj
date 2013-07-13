@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CAECC721791DBDA0000F471 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC711791DBDA0000F471 /* UIKit.framework */; };
+		3CAECC741791DBDA0000F471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC731791DBDA0000F471 /* Foundation.framework */; };
+		3CAECC761791DBDA0000F471 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC751791DBDA0000F471 /* CoreGraphics.framework */; };
+		3CAECC7C1791DBDA0000F471 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC7A1791DBDA0000F471 /* InfoPlist.strings */; };
+		3CAECC7E1791DBDA0000F471 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECC7D1791DBDA0000F471 /* main.m */; };
+		3CAECC821791DBDA0000F471 /* iDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECC811791DBDA0000F471 /* iDCAppDelegate.m */; };
+		3CAECC841791DBDA0000F471 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC831791DBDA0000F471 /* Default.png */; };
+		3CAECC861791DBDA0000F471 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC851791DBDA0000F471 /* Default@2x.png */; };
+		3CAECC881791DBDA0000F471 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC871791DBDA0000F471 /* Default-568h@2x.png */; };
+		3CAECC8B1791DBDB0000F471 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */; };
+		3CAECC8E1791DBDB0000F471 /* iDCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECC8D1791DBDB0000F471 /* iDCViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CAECC6E1791DBDA0000F471 /* simpleTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAECC711791DBDA0000F471 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3CAECC731791DBDA0000F471 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3CAECC751791DBDA0000F471 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3CAECC791791DBDA0000F471 /* simpleTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "simpleTask-Info.plist"; sourceTree = "<group>"; };
+		3CAECC7B1791DBDA0000F471 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3CAECC7D1791DBDA0000F471 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3CAECC7F1791DBDA0000F471 /* simpleTask-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "simpleTask-Prefix.pch"; sourceTree = "<group>"; };
+		3CAECC801791DBDA0000F471 /* iDCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iDCAppDelegate.h; sourceTree = "<group>"; };
+		3CAECC811791DBDA0000F471 /* iDCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDCAppDelegate.m; sourceTree = "<group>"; };
+		3CAECC831791DBDA0000F471 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3CAECC851791DBDA0000F471 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3CAECC871791DBDA0000F471 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3CAECC8A1791DBDB0000F471 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3CAECC8C1791DBDB0000F471 /* iDCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iDCViewController.h; sourceTree = "<group>"; };
+		3CAECC8D1791DBDB0000F471 /* iDCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDCViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CAECC6B1791DBDA0000F471 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CAECC721791DBDA0000F471 /* UIKit.framework in Frameworks */,
+				3CAECC741791DBDA0000F471 /* Foundation.framework in Frameworks */,
+				3CAECC761791DBDA0000F471 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CAECC651791DBDA0000F471 = {
+			isa = PBXGroup;
+			children = (
+				3CAECC771791DBDA0000F471 /* simpleTask */,
+				3CAECC701791DBDA0000F471 /* Frameworks */,
+				3CAECC6F1791DBDA0000F471 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CAECC6F1791DBDA0000F471 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CAECC6E1791DBDA0000F471 /* simpleTask.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CAECC701791DBDA0000F471 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CAECC711791DBDA0000F471 /* UIKit.framework */,
+				3CAECC731791DBDA0000F471 /* Foundation.framework */,
+				3CAECC751791DBDA0000F471 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CAECC771791DBDA0000F471 /* simpleTask */ = {
+			isa = PBXGroup;
+			children = (
+				3CAECC801791DBDA0000F471 /* iDCAppDelegate.h */,
+				3CAECC811791DBDA0000F471 /* iDCAppDelegate.m */,
+				3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */,
+				3CAECC8C1791DBDB0000F471 /* iDCViewController.h */,
+				3CAECC8D1791DBDB0000F471 /* iDCViewController.m */,
+				3CAECC781791DBDA0000F471 /* Supporting Files */,
+			);
+			path = simpleTask;
+			sourceTree = "<group>";
+		};
+		3CAECC781791DBDA0000F471 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CAECC791791DBDA0000F471 /* simpleTask-Info.plist */,
+				3CAECC7A1791DBDA0000F471 /* InfoPlist.strings */,
+				3CAECC7D1791DBDA0000F471 /* main.m */,
+				3CAECC7F1791DBDA0000F471 /* simpleTask-Prefix.pch */,
+				3CAECC831791DBDA0000F471 /* Default.png */,
+				3CAECC851791DBDA0000F471 /* Default@2x.png */,
+				3CAECC871791DBDA0000F471 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CAECC6D1791DBDA0000F471 /* simpleTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CAECC911791DBDB0000F471 /* Build configuration list for PBXNativeTarget "simpleTask" */;
+			buildPhases = (
+				3CAECC6A1791DBDA0000F471 /* Sources */,
+				3CAECC6B1791DBDA0000F471 /* Frameworks */,
+				3CAECC6C1791DBDA0000F471 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = simpleTask;
+			productName = simpleTask;
+			productReference = 3CAECC6E1791DBDA0000F471 /* simpleTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CAECC661791DBDA0000F471 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iDC;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Chenchen Zheng";
+			};
+			buildConfigurationList = 3CAECC691791DBDA0000F471 /* Build configuration list for PBXProject "simpleTask" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3CAECC651791DBDA0000F471;
+			productRefGroup = 3CAECC6F1791DBDA0000F471 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CAECC6D1791DBDA0000F471 /* simpleTask */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CAECC6C1791DBDA0000F471 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CAECC7C1791DBDA0000F471 /* InfoPlist.strings in Resources */,
+				3CAECC841791DBDA0000F471 /* Default.png in Resources */,
+				3CAECC861791DBDA0000F471 /* Default@2x.png in Resources */,
+				3CAECC881791DBDA0000F471 /* Default-568h@2x.png in Resources */,
+				3CAECC8B1791DBDB0000F471 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CAECC6A1791DBDA0000F471 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CAECC7E1791DBDA0000F471 /* main.m in Sources */,
+				3CAECC821791DBDA0000F471 /* iDCAppDelegate.m in Sources */,
+				3CAECC8E1791DBDB0000F471 /* iDCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3CAECC7A1791DBDA0000F471 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CAECC7B1791DBDA0000F471 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CAECC8A1791DBDB0000F471 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CAECC8F1791DBDB0000F471 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3CAECC901791DBDB0000F471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CAECC921791DBDB0000F471 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "simpleTask/simpleTask-Prefix.pch";
+				INFOPLIST_FILE = "simpleTask/simpleTask-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3CAECC931791DBDB0000F471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "simpleTask/simpleTask-Prefix.pch";
+				INFOPLIST_FILE = "simpleTask/simpleTask-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CAECC691791DBDA0000F471 /* Build configuration list for PBXProject "simpleTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAECC8F1791DBDB0000F471 /* Debug */,
+				3CAECC901791DBDB0000F471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CAECC911791DBDB0000F471 /* Build configuration list for PBXNativeTarget "simpleTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAECC921791DBDB0000F471 /* Debug */,
+				3CAECC931791DBDB0000F471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CAECC661791DBDA0000F471 /* Project object */;
+}
