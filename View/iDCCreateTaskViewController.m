@@ -164,12 +164,14 @@
     NSNumber *nMin = [f numberFromString:self.mins];
     NSNumber *totalMiliSec
     = [NSNumber numberWithInt:([nHour intValue]*60*60*1000 + [nMin intValue]*60*1000)];
+    NSNumber *heat = [NSNumber numberWithInt:(self.importance.selectedSegmentIndex+1)];
     
-    NSLog(@"taskTitle:%@, totalMiliSec:%@ lastDate:%@",taskTitle, totalMiliSec, lastDate);
+    NSLog(@"taskTitle:%@, totalMiliSec:%@ lastDate:%@ importance:%@",taskTitle, totalMiliSec, lastDate, heat);
     [newManagedObject setValue:taskTitle forKey:@"title"];
     [newManagedObject setValue:taskDetail forKey:@"detail"];
     [newManagedObject setValue:lastDate forKey:@"dueDate"];
     [newManagedObject setValue:totalMiliSec  forKey:@"hoursToFinish"];
+    [newManagedObject setValue:heat forKey:@"importance"];
     [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
 
     [self.managedObjectContext saveOnSuccess:^{
@@ -247,6 +249,8 @@
   NSString *result = [NSString stringWithFormat:@"%@ %@", self.hour, self.mins];
   [self.hours setText: result];
 }
+
+
 
 
 @end
