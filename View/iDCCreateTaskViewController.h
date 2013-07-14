@@ -12,6 +12,9 @@
 
 - (IBAction)createTask:(UIBarButtonItem *)sender;
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+
 @property (weak, nonatomic) IBOutlet UITextField *taskTitle;
 
 @property (weak, nonatomic) IBOutlet UITextField *details;

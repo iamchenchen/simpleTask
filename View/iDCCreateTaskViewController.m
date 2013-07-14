@@ -23,6 +23,9 @@
 
 - (IBAction)createTask:(UIBarButtonItem *)sender {
 
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Task"
+                                                                      inManagedObjectContext:self.managedObjectContext];
+
     NSString *taskTitle = self.taskTitle.text;
     NSString *taskDetail = self.details.text;
     
