@@ -7,6 +7,7 @@
 //
 
 #import "iDCTasksViewController.h"
+#import "iDCAppDelegate.h"
 
 @interface iDCTasksViewController ()
 
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+- (IBAction)logout:(id)sender {
+  [iDCAppDelegate logout];
 }
 
 @end

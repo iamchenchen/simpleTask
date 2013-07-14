@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o0V-j4-hTc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ur6-GA-lqP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zAB-E0-wHX">
             <objects>
-                <navigationController definesPresentationContext="YES" id="o0V-j4-hTc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LogInNavigation" definesPresentationContext="YES" id="o0V-j4-hTc" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wYV-nU-lv3">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -85,7 +85,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Fin-Km-gkw">
             <objects>
-                <navigationController definesPresentationContext="YES" id="Ur6-GA-lqP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigation" definesPresentationContext="YES" id="Ur6-GA-lqP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iuj-ju-CAO">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -161,7 +161,13 @@
                             <constraint firstItem="Glm-oi-uj6" firstAttribute="top" secondItem="0BH-YF-DJ7" secondAttribute="top" constant="55" type="user" id="v2l-DN-8WH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="W37-uy-fql"/>
+                    <navigationItem key="navigationItem" id="W37-uy-fql">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="b6Y-II-Xgj">
+                            <connections>
+                                <action selector="logout:" destination="SyJ-wN-cUC" id="qRU-AX-MYj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3C-kN-8dE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="o4o-9i-b1a">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="o4o-9i-b1a">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -192,7 +198,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hyQ-oT-CWP">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ijE-gN-AgO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ijE-gN-AgO">
                             <connections>
                                 <segue destination="lHq-Q9-3gs" kind="push" id="vUl-5p-BL1"/>
                             </connections>
@@ -380,7 +386,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCLoginViewController.h"/>
             <relationships>
                 <relationship kind="action" name="logInPressed:"/>
-                <relationship kind="action" name="signUpPressed:"/>
                 <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="loginTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
@@ -397,6 +402,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="iDCTasksViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCTasksViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logout:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -13,9 +13,6 @@
 		3CAECC7C1791DBDA0000F471 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC7A1791DBDA0000F471 /* InfoPlist.strings */; };
 		3CAECC7E1791DBDA0000F471 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECC7D1791DBDA0000F471 /* main.m */; };
 		3CAECC821791DBDA0000F471 /* iDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECC811791DBDA0000F471 /* iDCAppDelegate.m */; };
-		3CAECC841791DBDA0000F471 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC831791DBDA0000F471 /* Default.png */; };
-		3CAECC861791DBDA0000F471 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC851791DBDA0000F471 /* Default@2x.png */; };
-		3CAECC881791DBDA0000F471 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC871791DBDA0000F471 /* Default-568h@2x.png */; };
 		3CAECC8B1791DBDB0000F471 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */; };
 		3CAECC981791E17E0000F471 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC971791E17E0000F471 /* MobileCoreServices.framework */; };
 		3CAECC9A1791E1890000F471 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC991791E1890000F471 /* Security.framework */; };
@@ -79,6 +76,10 @@
 		3CAECD5C1792092D0000F471 /* iDCTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD5B1792092D0000F471 /* iDCTasksViewController.m */; };
 		3CAECD5F179214720000F471 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD5E179214720000F471 /* Task.m */; };
 		3CAECD62179220B30000F471 /* iDCCreateTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD61179220B30000F471 /* iDCCreateTaskViewController.m */; };
+		3CAECD6817922C2A0000F471 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECD6717922C2A0000F471 /* QuartzCore.framework */; };
+		3CAECD6C17922D410000F471 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD6A17922D410000F471 /* 37x-Checkmark.png */; };
+		3CAECD6D17922D410000F471 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD6B17922D410000F471 /* 37x-Checkmark@2x.png */; };
+		3CAECD6E17922EC70000F471 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD6617922A600000F471 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,6 +219,11 @@
 		3CAECD5E179214720000F471 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = coredata/Task.m; sourceTree = "<group>"; };
 		3CAECD60179220B20000F471 /* iDCCreateTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCCreateTaskViewController.h; path = View/iDCCreateTaskViewController.h; sourceTree = SOURCE_ROOT; };
 		3CAECD61179220B30000F471 /* iDCCreateTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCCreateTaskViewController.m; path = View/iDCCreateTaskViewController.m; sourceTree = SOURCE_ROOT; };
+		3CAECD6517922A600000F471 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = helpers/MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		3CAECD6617922A600000F471 /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = helpers/MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		3CAECD6717922C2A0000F471 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3CAECD6A17922D410000F471 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		3CAECD6B17922D410000F471 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAECD6817922C2A0000F471 /* QuartzCore.framework in Frameworks */,
 				3CAECCA01791E1AE0000F471 /* CoreData.framework in Frameworks */,
 				3CAECC9E1791E19F0000F471 /* SystemConfiguration.framework in Frameworks */,
 				3CAECC9C1791E1920000F471 /* CoreLocation.framework in Frameworks */,
@@ -246,7 +253,6 @@
 				3CAECCFC1791F39A0000F471 /* Resources */,
 				3CAECCA11791E2A80000F471 /* StackMob-v2.0.0 */,
 				3CAECC771791DBDA0000F471 /* simpleTask */,
-				3CAECC941791E0AD0000F471 /* libraries */,
 				3CAECC701791DBDA0000F471 /* Frameworks */,
 				3CAECC6F1791DBDA0000F471 /* Products */,
 			);
@@ -263,6 +269,7 @@
 		3CAECC701791DBDA0000F471 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CAECD6717922C2A0000F471 /* QuartzCore.framework */,
 				3CAECC9F1791E1AE0000F471 /* CoreData.framework */,
 				3CAECC9D1791E19F0000F471 /* SystemConfiguration.framework */,
 				3CAECC9B1791E1920000F471 /* CoreLocation.framework */,
@@ -278,6 +285,7 @@
 		3CAECC771791DBDA0000F471 /* simpleTask */ = {
 			isa = PBXGroup;
 			children = (
+				3CAECD6317922A340000F471 /* Helpers */,
 				3CAECCEF1791F2BC0000F471 /* Theme */,
 				3CAECCEE1791EFBB0000F471 /* View */,
 				3CAECCDE1791E74E0000F471 /* coredata */,
@@ -301,13 +309,6 @@
 				3CAECC871791DBDA0000F471 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3CAECC941791E0AD0000F471 /* libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = libraries;
 			sourceTree = "<group>";
 		};
 		3CAECCA11791E2A80000F471 /* StackMob-v2.0.0 */ = {
@@ -389,9 +390,9 @@
 		3CAECCDE1791E74E0000F471 /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				3CAECCDB1791E7460000F471 /* simpleTaskData.xcdatamodeld */,
 				3CAECD5D179214720000F471 /* Task.h */,
 				3CAECD5E179214720000F471 /* Task.m */,
-				3CAECCDB1791E7460000F471 /* simpleTaskData.xcdatamodeld */,
 				3CAECCE51791ECA90000F471 /* User.h */,
 				3CAECCE61791ECA90000F471 /* User.m */,
 			);
@@ -454,6 +455,7 @@
 		3CAECCFC1791F39A0000F471 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CAECD6917922D410000F471 /* transitions */,
 				3CAECCFD1791F39A0000F471 /* backButton.png */,
 				3CAECCFE1791F39A0000F471 /* backButton@2x.png */,
 				3CAECCFF1791F39A0000F471 /* background.png */,
@@ -501,6 +503,32 @@
 				3CAECD291791F39B0000F471 /* sliderThumb@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3CAECD6317922A340000F471 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3CAECD6417922A3B0000F471 /* MBProgressHUD */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		3CAECD6417922A3B0000F471 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3CAECD6517922A600000F471 /* MBProgressHUD.h */,
+				3CAECD6617922A600000F471 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		3CAECD6917922D410000F471 /* transitions */ = {
+			isa = PBXGroup;
+			children = (
+				3CAECD6A17922D410000F471 /* 37x-Checkmark.png */,
+				3CAECD6B17922D410000F471 /* 37x-Checkmark@2x.png */,
+			);
+			path = transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,9 +584,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CAECC7C1791DBDA0000F471 /* InfoPlist.strings in Resources */,
-				3CAECC841791DBDA0000F471 /* Default.png in Resources */,
-				3CAECC861791DBDA0000F471 /* Default@2x.png in Resources */,
-				3CAECC881791DBDA0000F471 /* Default-568h@2x.png in Resources */,
 				3CAECC8B1791DBDB0000F471 /* MainStoryboard.storyboard in Resources */,
 				3CAECCD91791E2A80000F471 /* CHANGELOG.md in Resources */,
 				3CAECD2A1791F39B0000F471 /* backButton.png in Resources */,
@@ -606,6 +631,8 @@
 				3CAECD541791F39B0000F471 /* sliderMinTrack_.png in Resources */,
 				3CAECD551791F39B0000F471 /* sliderThumb.png in Resources */,
 				3CAECD561791F39B0000F471 /* sliderThumb@2x.png in Resources */,
+				3CAECD6C17922D410000F471 /* 37x-Checkmark.png in Resources */,
+				3CAECD6D17922D410000F471 /* 37x-Checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +655,7 @@
 				3CAECD5C1792092D0000F471 /* iDCTasksViewController.m in Sources */,
 				3CAECD5F179214720000F471 /* Task.m in Sources */,
 				3CAECD62179220B30000F471 /* iDCCreateTaskViewController.m in Sources */,
+				3CAECD6E17922EC70000F471 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +788,7 @@
 				3CAECC931791DBDB0000F471 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
