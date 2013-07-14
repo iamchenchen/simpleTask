@@ -170,7 +170,7 @@
     [newManagedObject setValue:taskTitle forKey:@"title"];
     [newManagedObject setValue:taskDetail forKey:@"detail"];
     [newManagedObject setValue:lastDate forKey:@"dueDate"];
-    [newManagedObject setValue:totalMiliSec  forKey:@"hoursToFinish"];
+    [newManagedObject setValue:totalMiliSec  forKey:@"hourToFinish"];
     [newManagedObject setValue:heat forKey:@"importance"];
     [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
 
