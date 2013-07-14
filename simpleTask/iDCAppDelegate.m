@@ -142,6 +142,7 @@
 + (void) logout
 {
   iDCAppDelegate *appDelegate = [iDCAppDelegate instance];
+  [iDCAppDelegate showProgressView];
   [appDelegate.client logoutOnSuccess:^(NSDictionary *result) {
     NSLog(@"Success, you are logged out");
     //move to login screen
@@ -149,6 +150,7 @@
   } onFailure:^(NSError *error) {
     NSLog(@"Logout Fail: %@",error);
   }];
+  [iDCAppDelegate hideProgressView];
 }
 
 @end

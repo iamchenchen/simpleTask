@@ -86,8 +86,8 @@
 //Login button pressed
 -(IBAction)logInPressed:(id)sender
 {
+  [iDCAppDelegate showProgressView];
   [self.client loginWithUsername:self.userTextField.text password:self.passwordTextField.text onSuccess:^(NSDictionary *results) {
-    
 //    if ([self.client isLoggedIn]) {
       NSLog(@"Logged in");
 //    }
@@ -105,7 +105,7 @@
      } onFailure:^(NSError *error) {
      NSLog(@"Error fetching user object: %@", error);
      }];
-    
+    [iDCAppDelegate hideProgressView];
     [self performSegueWithIdentifier:@"afterSignIn" sender:self];
     
   } onFailure:^(NSError *error) {

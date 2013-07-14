@@ -9,6 +9,7 @@
 #import "iDCTaskListViewController.h"
 #import "StackMob.h"
 #import "Task.h"
+#import "iDCTaskDetailViewController.h"
 
 @interface iDCTaskListViewController ()
 /*
@@ -82,7 +83,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [self.tasks count];
 }
@@ -144,13 +144,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+  iDCTaskDetailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailVC"];
+  dvc.task = [self.tasks objectAtIndex:indexPath.row];
+  [self.navigationController pushViewController:dvc animated:YES];
 }
 
 @end
