@@ -181,7 +181,7 @@
     [newManagedObject setValue:taskTitle forKey:@"title"];
     [newManagedObject setValue:taskDetail forKey:@"detail"];
     [newManagedObject setValue:dueDate forKey:@"dueDate"];
-    [newManagedObject setValue:sHr  forKey:@"hoursToFinish"];
+    [newManagedObject setValue:sHr  forKey:@"hourToFinish"];
     [newManagedObject setValue:heat forKey:@"importance"];
     [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
 
