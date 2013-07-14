@@ -15,8 +15,10 @@
 
 @property (nonatomic, retain) NSNumber * createddate;
 @property (nonatomic, retain) NSNumber * lastmoddate;
-@property (nonatomic, retain) NSString * taskDescription;
-@property (nonatomic, retain) NSString * task_id;
+@property (nonatomic, retain) NSString * detail;
+@property (nonatomic, retain) NSString * taskId;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * priority;
 @property (nonatomic, retain) User *whoOwn;
 
 @end

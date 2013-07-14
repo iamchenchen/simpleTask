@@ -14,8 +14,10 @@
 
 @dynamic createddate;
 @dynamic lastmoddate;
-@dynamic taskDescription;
-@dynamic task_id;
+@dynamic detail;
+@dynamic taskId;
+@dynamic title;
+@dynamic priority;
 @dynamic whoOwn;
 
 @end
