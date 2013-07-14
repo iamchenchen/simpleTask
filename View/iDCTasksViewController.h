@@ -7,6 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iDCTaskListViewController.h"
 
 @interface iDCTasksViewController : UIViewController
+
+@property(strong, nonatomic) iDCTaskListViewController *listVC;
+
+
+- (IBAction)smallTaskAction:(UIButton *)sender;
+
+- (IBAction)mediumTaskAction:(UIButton *)sender;
+
+- (IBAction)bigTaskAction:(UIButton *)sender;
+
+
 @end

@@ -20,6 +20,7 @@
 
 @implementation iDCTaskListViewController
 @synthesize tasks = _tasks;
+@synthesize priority = _priority;
 
 - (void)viewDidLoad
 {
@@ -28,6 +29,8 @@
   /*
    We initialize our refresh control and assign the refreshTable method to get called when the refresh is initiated. Then we initiate the refresh process.
    */
+  NSLog(@"passedValue %@",self.priority);
+    
   UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
   [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
   self.refreshControl  = refreshControl;
@@ -36,7 +39,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-  [self refreshTable];
+    NSLog(@"passedValue %@",self.priority);
+
+    [self refreshTable];
 }
 
 
@@ -52,6 +57,7 @@
    
    Finally, we execute the fetch request, assign the results to our objects property, and reload the table data.
    */
+    NSLog(@"passedValue %@",self.priority);
   
   NSManagedObjectContext *context = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
   
