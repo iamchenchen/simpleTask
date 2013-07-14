@@ -52,6 +52,8 @@
   [self.loginButton setBackgroundImage:[theme colorButtonBackgroundForState:UIControlStateNormal] forState:UIControlStateNormal];
   [self.loginButton setBackgroundImage:[theme colorButtonBackgroundForState:UIControlStateHighlighted] forState:UIControlStateHighlighted];
   
+  [self.signupButton setBackgroundImage:[theme buttonBackgroundForState:UIControlStateNormal] forState:UIControlStateNormal];
+  [self.signupButton setBackgroundImage:[theme buttonBackgroundForState:UIControlStateHighlighted] forState:UIControlStateHighlighted];
   
   
   self.userTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 10, 260, 50)];
@@ -82,10 +84,10 @@
 #pragma mark IB Actions
 
 //Show the hidden register view
--(IBAction)signUpPressed:(id)sender
-{
-  [self performSegueWithIdentifier:@"signup" sender:self];
-}
+//-(IBAction)signUpPressed:(id)sender
+//{
+//  [self performSegueWithIdentifier:@"signup" sender:self];
+//}
 
 //Login button pressed
 -(IBAction)logInPressed:(id)sender
@@ -119,13 +121,13 @@
   if(indexPath.row == 0){
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UsernameCell"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell addSubview:self.userTextField];
     
   }else {
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PasswordCell"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell addSubview:self.passwordTextField];
   }
   
