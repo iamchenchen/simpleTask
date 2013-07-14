@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * dueDate;
 @property (nonatomic, retain) NSNumber * hoursToFinish;
+@property (nonatomic, retain) NSNumber * importance;
 @property (nonatomic, retain) User *whoOwn;
 
 @end

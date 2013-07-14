@@ -19,6 +19,7 @@
 @dynamic title;
 @dynamic dueDate;
 @dynamic hoursToFinish;
+@dynamic importance;
 @dynamic whoOwn;
 
 @end

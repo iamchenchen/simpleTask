@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSArray *minuteList;
 @property (nonatomic, strong) NSString *hour;
 @property (nonatomic, strong) NSString *mins;
+@property (nonatomic, strong) NSNumber *importance;
 @end
 
 @implementation iDCCreateTaskViewController
