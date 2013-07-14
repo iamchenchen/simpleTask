@@ -8,8 +8,10 @@
 
 #import "iDCAppDelegate.h"
 #import "StackMob.h"
-//Theme...
-#import "ADVTheme.h"
+
+#import "ADVTheme.h" //theme
+
+#import "iDCLoginViewController.h"
 
 
 #define STACK_MOB_DEV_PUBLIC_KEY @"e92699ac-7895-4fcd-8e04-a94e9f45e4f8"
@@ -28,7 +30,7 @@
   
   self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:STACK_MOB_DEV_PUBLIC_KEY];
   self.coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
-  
+  [self signInChecker];
   return YES;
 }
 
@@ -115,6 +117,38 @@
 	[appDelegate.hud hide:YES afterDelay:1];
 }
 
+#pragma mark - private functions
 
+- (void) signInChecker
+{
+  if([self.client isLoggedIn]) {
+    
+    [self.client getLoggedInUserOnSuccess:^(NSDictionary *result) {
+//      self.statusLabel.text = [NSString stringWithFormat:@"Hello, %@", [result objectForKey:@"username"]];
+      NSLog(@"Hello, %@", [result objectForKey:@"username"]);
+    } onFailure:^(NSError *error) {
+      NSLog(@"No user found");
+    }];
+    
+  } else {
+//    self.statusLabel.text = @"Nope, not Logged In";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    iDCLoginViewController *login = (iDCLoginViewController *)[storyboard instantiateViewControllerWithIdentifier:@"LogInNavigation"];
+    self.window.rootViewController = login;
+    
+  }
+}
+
++ (void) logout
+{
+  iDCAppDelegate *appDelegate = [iDCAppDelegate instance];
+  [appDelegate.client logoutOnSuccess:^(NSDictionary *result) {
+    NSLog(@"Success, you are logged out");
+    //move to login screen
+    [appDelegate signInChecker];
+  } onFailure:^(NSError *error) {
+    NSLog(@"Logout Fail: %@",error);
+  }];
+}
 
 @end

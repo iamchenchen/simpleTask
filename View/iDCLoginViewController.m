@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
   id <ADVTheme> theme = [ADVThemeManager sharedTheme];
   
   
@@ -74,12 +75,6 @@
   
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark IB Actions
 
 //Show the hidden register view
@@ -93,9 +88,23 @@
 {
   [self.client loginWithUsername:self.userTextField.text password:self.passwordTextField.text onSuccess:^(NSDictionary *results) {
     
-    if ([self.client isLoggedIn]) {
+//    if ([self.client isLoggedIn]) {
       NSLog(@"Logged in");
-    }
+//    }
+    /* Uncomment the following if you are using Core Data integration and want to retrieve a managed object representation of the user object.  Store the resulting object or object ID for future use.
+     
+     Be sure to declare variables you are referencing in this block with the __block storage type modifier, including the managedObjectContext property.
+     */
+     // Edit entity name and predicate if you are not using the default user schema with username primary key field.
+     NSFetchRequest *userFetch = [[NSFetchRequest alloc] initWithEntityName:@"User"];
+     [userFetch setPredicate:[NSPredicate predicateWithFormat:@"username == %@", [results objectForKey:@"username"]]];
+     [self.managedObjectContext executeFetchRequest:userFetch onSuccess:^(NSArray *results) {
+     NSManagedObject *userObject = [results lastObject];
+     // Store userObject somewhere for later use
+     NSLog(@"Fetched user object: %@", userObject);
+     } onFailure:^(NSError *error) {
+     NSLog(@"Error fetching user object: %@", error);
+     }];
     
     [self performSegueWithIdentifier:@"afterSignIn" sender:self];
     

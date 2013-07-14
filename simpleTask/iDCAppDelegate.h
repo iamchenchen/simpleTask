@@ -33,4 +33,7 @@
 + (void)hideProgressViewWithComplete: (NSString *)message;
 + (void)showCompleteView:(NSString *) message;
 
+
+//StockMob function
++ (void)logout;
 @end
