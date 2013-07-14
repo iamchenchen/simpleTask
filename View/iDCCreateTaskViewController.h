@@ -9,18 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "StackMob.h"
 
-@interface iDCCreateTaskViewController : UIViewController
+@interface iDCCreateTaskViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate, UIActionSheetDelegate>
 
 - (IBAction)createTask:(UIBarButtonItem *)sender;
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-
 @property (weak, nonatomic) IBOutlet UITextField *taskTitle;
-
-@property (weak, nonatomic) IBOutlet UITextField *details;
-
-@property (weak, nonatomic) IBOutlet UISegmentedControl *priority;
+@property (weak, nonatomic) IBOutlet UITextView *taskDetail;
+@property (weak, nonatomic) IBOutlet UILabel *dueDate;
+@property (weak, nonatomic) IBOutlet UILabel *hours;
 
 
 
