@@ -363,12 +363,20 @@
                                     <segue destination="y5q-4f-vko" kind="push" id="z0B-wF-vDn"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="task_detail.png" translatesAutoresizingMaskIntoConstraints="NO" id="XU0-5d-PMt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="3yz-bl-HpX"/>
+                                    <constraint firstAttribute="width" constant="362" id="yZc-NR-nu2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1Rf-5W-Zkl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Uf-E3-n8a"/>
-                            <constraint firstItem="hbB-mP-nq8" firstAttribute="top" secondItem="lwc-lU-2GW" secondAttribute="top" constant="77" id="Dmb-lx-aoh"/>
+                            <constraint firstItem="XU0-5d-PMt" firstAttribute="top" secondItem="lwc-lU-2GW" secondAttribute="top" type="default" id="EH2-K3-b9x"/>
                             <constraint firstItem="1Rf-5W-Zkl" firstAttribute="leading" secondItem="lwc-lU-2GW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XG7-X7-mI9"/>
+                            <constraint firstItem="hbB-mP-nq8" firstAttribute="bottom" secondItem="XU0-5d-PMt" secondAttribute="bottom" type="default" id="XN6-JH-k8p"/>
+                            <constraint firstItem="1Rf-5W-Zkl" firstAttribute="centerX" secondItem="XU0-5d-PMt" secondAttribute="centerX" type="default" id="euK-Ps-E4O"/>
                             <constraint firstItem="5kf-Rv-KJc" firstAttribute="centerX" secondItem="hbB-mP-nq8" secondAttribute="centerX" type="default" id="f2h-aR-BYa"/>
                             <constraint firstItem="1Rf-5W-Zkl" firstAttribute="top" secondItem="lwc-lU-2GW" secondAttribute="top" constant="20" symbolic="YES" type="default" id="hwm-1r-3bx"/>
                             <constraint firstAttribute="bottom" secondItem="5kf-Rv-KJc" secondAttribute="bottom" constant="37" id="qRD-Ge-FUq"/>
@@ -395,16 +403,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Timer.png" translatesAutoresizingMaskIntoConstraints="NO" id="UW1-Hf-1an">
+                                <color key="backgroundColor" red="0.9450981021" green="0.9450981021" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="494" id="HzN-CE-fZe"/>
+                                    <constraint firstAttribute="width" constant="345" id="1nE-l7-IfQ"/>
+                                    <constraint firstAttribute="height" constant="458" id="Umc-Wr-4ee"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UW1-Hf-1an" firstAttribute="leading" secondItem="LAF-cU-m9c" secondAttribute="leading" type="default" id="3TS-h8-g2E"/>
-                            <constraint firstItem="UW1-Hf-1an" firstAttribute="top" secondItem="LAF-cU-m9c" secondAttribute="top" type="default" id="MiF-XG-XdX"/>
-                            <constraint firstItem="UW1-Hf-1an" firstAttribute="trailing" secondItem="LAF-cU-m9c" secondAttribute="trailing" type="default" id="QD6-7I-lpk"/>
+                            <constraint firstItem="UW1-Hf-1an" firstAttribute="centerX" secondItem="LAF-cU-m9c" secondAttribute="centerX" type="default" id="9yp-BU-ZGJ"/>
+                            <constraint firstItem="UW1-Hf-1an" firstAttribute="top" secondItem="LAF-cU-m9c" secondAttribute="top" type="default" id="obp-HE-omL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fHh-t3-6Ct"/>
@@ -579,6 +588,7 @@
         <image name="fish.png" width="143" height="143"/>
         <image name="home.png" width="1782" height="1211"/>
         <image name="squid.png" width="159" height="159"/>
+        <image name="task_detail.png" width="659" height="575"/>
         <image name="whale.png" width="197" height="197"/>
     </resources>
     <classes>
@@ -629,6 +639,10 @@
         </class>
         <class className="iDCTasksViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCTasksViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logout:"/>
+                <relationship kind="action" name="toList:" candidateClass="UIButton"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

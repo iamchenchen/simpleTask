@@ -109,9 +109,9 @@
   day.text = [NSString stringWithFormat:@"%@", task.hourToFinish];
   title.textColor = [UIColor whiteColor];
   day.textColor = [UIColor whiteColor];
-  UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 28.0 ];
+  UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 28.0];
   title.font = myFont;
-  
+  NSLog(@"task. is %@", task.hourToFinish);
 //  cell.textLabel.text = task.title;
 //  cell.textLabel.textColor = [UIColor whiteColor];
 //  cell.detailTextLabel.textColor = [UIColor whiteColor];
