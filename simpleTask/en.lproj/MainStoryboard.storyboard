@@ -167,7 +167,6 @@
         <!--Table View Controller-->
         <scene sceneID="8II-ZE-Ldw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zTs-CA-mq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="dwl-Yg-nFV" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="A2N-S0-EJQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -200,6 +199,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTs-CA-mq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1163" y="1559"/>
         </scene>
@@ -212,13 +212,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tie-Py-9a0">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="244" id="mU7-1v-Y6l"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8FH-RB-1VN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="YPu-uw-R5w"/>
+                                </constraints>
                                 <segments>
                                     <segment title="High"/>
                                     <segment title="Medium"/>
@@ -230,16 +230,74 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J7a-Uv-geu">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="PLL-bj-kVU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIX-EC-O6W">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HPI-bY-sXU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="9t8-zM-RyN"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="395454748.21643698">
+                                    <!--2013-07-14 00:32:28 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <mutableData key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</mutableData>
+                                </timeZone>
+                            </datePicker>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7j-Mh-sEh">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="2t8-Cz-X2e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VF9-nq-aa7" firstAttribute="top" secondItem="AWw-qD-4JR" secondAttribute="top" constant="13" id="2jc-Ga-CtR"/>
-                            <constraint firstItem="8FH-RB-1VN" firstAttribute="trailing" secondItem="Tie-Py-9a0" secondAttribute="trailing" type="default" id="6wB-rQ-bI0"/>
-                            <constraint firstItem="8FH-RB-1VN" firstAttribute="leading" secondItem="Tie-Py-9a0" secondAttribute="leading" type="default" id="Alz-sW-zZh"/>
-                            <constraint firstItem="Tie-Py-9a0" firstAttribute="top" secondItem="VF9-nq-aa7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SNY-y7-NAl"/>
-                            <constraint firstItem="8FH-RB-1VN" firstAttribute="centerX" secondItem="AWw-qD-4JR" secondAttribute="centerX" type="default" id="biq-u8-09e"/>
-                            <constraint firstItem="VF9-nq-aa7" firstAttribute="leading" secondItem="Tie-Py-9a0" secondAttribute="leading" type="default" id="dZ1-Qb-Pbc"/>
-                            <constraint firstItem="8FH-RB-1VN" firstAttribute="top" secondItem="AWw-qD-4JR" secondAttribute="top" constant="96" id="m5h-0g-bR6"/>
+                            <constraint firstItem="8FH-RB-1VN" firstAttribute="top" secondItem="AWw-qD-4JR" secondAttribute="top" constant="95" id="6lg-s5-SrF"/>
+                            <constraint firstItem="J7a-Uv-geu" firstAttribute="baseline" secondItem="hIX-EC-O6W" secondAttribute="baseline" type="default" id="8DI-mf-HXQ"/>
+                            <constraint firstItem="J7a-Uv-geu" firstAttribute="leading" secondItem="hIX-EC-O6W" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Jbm-fE-YQl"/>
+                            <constraint firstItem="VF9-nq-aa7" firstAttribute="leading" secondItem="AWw-qD-4JR" secondAttribute="leading" constant="3" id="N9x-gN-yH9"/>
+                            <constraint firstItem="Tie-Py-9a0" firstAttribute="top" secondItem="VF9-nq-aa7" secondAttribute="top" type="default" id="XAj-Si-ReO"/>
+                            <constraint firstItem="J7a-Uv-geu" firstAttribute="leading" secondItem="Tie-Py-9a0" secondAttribute="leading" type="default" id="aYl-9d-6AH"/>
+                            <constraint firstItem="VF9-nq-aa7" firstAttribute="top" secondItem="AWw-qD-4JR" secondAttribute="top" constant="50" id="bHG-sD-SnD"/>
+                            <constraint firstItem="HPI-bY-sXU" firstAttribute="leading" secondItem="AWw-qD-4JR" secondAttribute="leading" type="default" id="fFC-43-yz8"/>
+                            <constraint firstItem="B7j-Mh-sEh" firstAttribute="top" secondItem="AWw-qD-4JR" secondAttribute="top" constant="138" id="ffk-gH-elM"/>
+                            <constraint firstItem="HPI-bY-sXU" firstAttribute="trailing" secondItem="AWw-qD-4JR" secondAttribute="trailing" type="default" id="h18-6u-yYv"/>
+                            <constraint firstItem="HPI-bY-sXU" firstAttribute="centerX" secondItem="8FH-RB-1VN" secondAttribute="centerX" type="default" id="la7-7l-m1U"/>
+                            <constraint firstItem="Tie-Py-9a0" firstAttribute="trailing" secondItem="J7a-Uv-geu" secondAttribute="trailing" type="default" id="n6u-nN-iue"/>
+                            <constraint firstItem="J7a-Uv-geu" firstAttribute="top" secondItem="AWw-qD-4JR" secondAttribute="top" constant="5" id="rxn-7B-eJy"/>
+                            <constraint firstItem="hIX-EC-O6W" firstAttribute="centerX" secondItem="VF9-nq-aa7" secondAttribute="centerX" type="default" id="sBd-Iv-F34"/>
+                            <constraint firstItem="B7j-Mh-sEh" firstAttribute="leading" secondItem="hIX-EC-O6W" secondAttribute="leading" type="default" id="vzk-Wp-RNe"/>
+                            <constraint firstItem="HPI-bY-sXU" firstAttribute="top" secondItem="B7j-Mh-sEh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ye9-Lh-YFb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rdz-hx-hr7">
