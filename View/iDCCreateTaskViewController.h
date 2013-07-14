@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *taskDetail;
 @property (weak, nonatomic) IBOutlet UILabel *dueDate;
 @property (weak, nonatomic) IBOutlet UILabel *hours;
-//@property (weak, nonatomic) IBOutlet UILabel *importance;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *importance;
 
 - (IBAction)createTask:(UIBarButtonItem *)sender;
 
