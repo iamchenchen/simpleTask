@@ -59,7 +59,6 @@
    
    Finally, we execute the fetch request, assign the results to our objects property, and reload the table data.
    */
-    NSLog(@"Passed Value:%@",self.priority);
   NSManagedObjectContext *context = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
   
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Task"];
@@ -128,7 +127,7 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
   Task *task = (Task *)[self.tasks objectAtIndex:indexPath.row];
-  if ([task.importance isEqualToNumber:[NSNumber numberWithInt: 3]]) {
+  if ([task.importance isEqualToNumber:[NSNumber numberWithInt: 1]]) {
     cell.backgroundColor = [self redColor];
   } else if ([task.importance isEqualToNumber:[NSNumber numberWithInt:2]]) {
     cell.backgroundColor = [self yellowColor];

@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSArray *minuteList;
 @property (nonatomic, strong) NSString *hour;
 @property (nonatomic, strong) NSString *mins;
+@property (nonatomic, strong) NSNumber *impt;
 @end
 
 @implementation iDCCreateTaskViewController
@@ -155,10 +156,20 @@
 
     NSString *taskTitle = self.taskTitle.text;
     NSString *taskDetail = self.taskDetail.text;
+    NSDate *lastDate = self.datePicker.date ;
+    //NSNumber self.hour
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber *nHour = [f numberFromString:self.hour];
+    NSNumber *nMin = [f numberFromString:self.mins];
+    NSNumber *totalMiliSec
+    = [NSNumber numberWithInt:([nHour intValue]*60*60*1000 + [nMin intValue]*60*1000)];
     
-    NSLog(@"taskTitle:%@, taskDetail:%@",taskTitle, taskDetail);
+    NSLog(@"taskTitle:%@, totalMiliSec:%@ lastDate:%@",taskTitle, totalMiliSec, lastDate);
     [newManagedObject setValue:taskTitle forKey:@"title"];
     [newManagedObject setValue:taskDetail forKey:@"detail"];
+    [newManagedObject setValue:lastDate forKey:@"dueDate"];
+    [newManagedObject setValue:totalMiliSec  forKey:@"hoursToFinish"];
     [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
 
     [self.managedObjectContext saveOnSuccess:^{
@@ -236,8 +247,6 @@
   NSString *result = [NSString stringWithFormat:@"%@ %@", self.hour, self.mins];
   [self.hours setText: result];
 }
-//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
-//{
-//  return
-//}
+
+
 @end
