@@ -21,9 +21,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
-- (IBAction)logout:(id)sender {
-  [iDCAppDelegate logout];
-}
 
 // This will get called too before the view appears
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
