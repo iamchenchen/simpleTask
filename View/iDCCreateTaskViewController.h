@@ -10,4 +10,7 @@
 
 @interface iDCCreateTaskViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *createTask;
+
+
 @end
