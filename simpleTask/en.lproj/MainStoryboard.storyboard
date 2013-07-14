@@ -118,7 +118,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="toList:" destination="SyJ-wN-cUC" eventType="touchUpInside" id="eDm-8Z-Rts"/>
+                                    <action selector="smallTaskAction:" destination="SyJ-wN-cUC" eventType="touchUpInside" id="VVf-4h-q9H"/>
+                                    <segue destination="dwl-Yg-nFV" kind="push" id="Pdm-MK-6sj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCd-f7-1vy">
@@ -211,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Task" textLabel="ePz-k0-FI0" style="IBUITableViewCellStyleDefault" id="o4o-9i-b1a">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Task" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Task" textLabel="ePz-k0-FI0" style="IBUITableViewCellStyleDefault" id="o4o-9i-b1a">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

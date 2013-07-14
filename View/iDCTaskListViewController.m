@@ -29,7 +29,6 @@
   /*
    We initialize our refresh control and assign the refreshTable method to get called when the refresh is initiated. Then we initiate the refresh process.
    */
-  NSLog(@"passedValue %@",self.priority);
     
   UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
   [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
@@ -39,7 +38,6 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"passedValue %@",self.priority);
 
     [self refreshTable];
 }
@@ -57,8 +55,7 @@
    
    Finally, we execute the fetch request, assign the results to our objects property, and reload the table data.
    */
-    NSLog(@"passedValue %@",self.priority);
-  
+    NSLog(@"Passed Value:%@",self.priority);
   NSManagedObjectContext *context = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
   
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Task"];
