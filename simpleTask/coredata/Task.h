@@ -14,11 +14,12 @@
 @interface Task : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * createddate;
-@property (nonatomic, retain) NSNumber * lastmoddate;
 @property (nonatomic, retain) NSString * detail;
+@property (nonatomic, retain) NSNumber * lastmoddate;
 @property (nonatomic, retain) NSString * taskId;
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * priority;
+@property (nonatomic, retain) NSNumber * dueDate;
+@property (nonatomic, retain) NSNumber * hoursToFinish;
 @property (nonatomic, retain) User *whoOwn;
 
 @end

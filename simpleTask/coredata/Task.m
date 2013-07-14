@@ -13,11 +13,12 @@
 @implementation Task
 
 @dynamic createddate;
-@dynamic lastmoddate;
 @dynamic detail;
+@dynamic lastmoddate;
 @dynamic taskId;
 @dynamic title;
-@dynamic priority;
+@dynamic dueDate;
+@dynamic hoursToFinish;
 @dynamic whoOwn;
 
 @end

@@ -150,14 +150,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Glm-oi-uj6" firstAttribute="top" secondItem="0BH-YF-DJ7" secondAttribute="top" constant="29" id="7gM-Zc-bCr"/>
                             <constraint firstItem="ArS-Xu-BpF" firstAttribute="leading" secondItem="dCd-f7-1vy" secondAttribute="leading" type="default" id="GwC-Nq-BFX"/>
                             <constraint firstItem="ArS-Xu-BpF" firstAttribute="trailing" secondItem="dCd-f7-1vy" secondAttribute="trailing" type="default" id="TRj-f2-OB4"/>
                             <constraint firstItem="dCd-f7-1vy" firstAttribute="leading" secondItem="Glm-oi-uj6" secondAttribute="leading" type="default" id="U9B-lE-Uge"/>
-                            <constraint firstItem="Glm-oi-uj6" firstAttribute="centerX" secondItem="0BH-YF-DJ7" secondAttribute="centerX" type="default" id="Wva-Xh-hle"/>
                             <constraint firstItem="dCd-f7-1vy" firstAttribute="top" secondItem="Glm-oi-uj6" secondAttribute="bottom" constant="30" type="user" id="Znm-ux-HtI"/>
                             <constraint firstItem="dCd-f7-1vy" firstAttribute="trailing" secondItem="Glm-oi-uj6" secondAttribute="trailing" type="default" id="ZtD-pq-5Nv"/>
                             <constraint firstItem="ArS-Xu-BpF" firstAttribute="top" secondItem="dCd-f7-1vy" secondAttribute="bottom" constant="30" type="user" id="amD-tT-zmP"/>
-                            <constraint firstItem="Glm-oi-uj6" firstAttribute="top" secondItem="0BH-YF-DJ7" secondAttribute="top" constant="55" type="user" id="v2l-DN-8WH"/>
+                            <constraint firstItem="dCd-f7-1vy" firstAttribute="centerX" secondItem="0BH-YF-DJ7" secondAttribute="centerX" type="default" id="kpR-wM-y6f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="W37-uy-fql">

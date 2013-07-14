@@ -110,6 +110,7 @@
     
   } onFailure:^(NSError *error) {
     //Something bad has ocurred
+    [iDCAppDelegate hideProgressView];
     NSString *errorString = [error localizedDescription];
     UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [errorAlertView show];
