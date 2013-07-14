@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StackMob.h"
 
 @interface iDCCreateTaskViewController : UIViewController
 
