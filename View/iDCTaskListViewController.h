@@ -13,5 +13,6 @@
 
 @interface iDCTaskListViewController : UITableViewController
 @property(nonatomic) NSNumber *priority;
+- (void) setSelectedButton:(NSInteger)tagIndex;
 
 @end

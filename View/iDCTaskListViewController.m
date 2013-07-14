@@ -146,6 +146,12 @@
 }
 */
 
+- (void) setSelectedButton:(NSInteger)tagIndex
+{
+  NSLog(@"it is called");
+  self.priority = [[NSNumber alloc] initWithInteger: tagIndex];
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
