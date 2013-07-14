@@ -75,13 +75,13 @@
   if(indexPath.row == 0){
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UsernameCell"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell addSubview:self.userRegisterTextField];
     
   }else {
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PasswordCell"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell addSubview:self.passwordRegisterTextField];
   }
   

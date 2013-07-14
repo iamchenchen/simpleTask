@@ -29,7 +29,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXs-zw-7aQ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="1Kj-NN-RaM"/>
                                     <constraint firstAttribute="width" constant="112" id="HlE-SZ-fID"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -45,6 +44,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-jP-9Ts">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="5Ey-Xt-JDq"/>
+                                    <constraint firstAttribute="height" constant="41" id="Cau-Dz-eU6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,18 +57,18 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpPressed:" destination="O80-va-BYU" eventType="touchUpInside" id="1K4-hp-85o"/>
                                     <segue destination="akX-QB-MlK" kind="push" identifier="signup" id="fwy-4h-T6g"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Sf2-jP-9Ts" firstAttribute="top" secondItem="lwU-VH-PT0" secondAttribute="top" constant="169" id="5vL-zc-937"/>
-                            <constraint firstItem="Sf2-jP-9Ts" firstAttribute="top" secondItem="PXs-zw-7aQ" secondAttribute="top" type="default" id="7lK-qt-mYg"/>
-                            <constraint firstItem="Sf2-jP-9Ts" firstAttribute="leading" secondItem="lwU-VH-PT0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="VGH-Yq-ROm"/>
+                            <constraint firstItem="Sf2-jP-9Ts" firstAttribute="baseline" secondItem="PXs-zw-7aQ" secondAttribute="baseline" type="default" id="JPo-O8-r1n"/>
+                            <constraint firstItem="Sf2-jP-9Ts" firstAttribute="top" secondItem="PXs-zw-7aQ" secondAttribute="top" type="default" id="VlJ-rl-bBY"/>
+                            <constraint firstItem="Sf2-jP-9Ts" firstAttribute="leading" secondItem="lwU-VH-PT0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Y3M-IW-dDi"/>
                             <constraint firstAttribute="trailing" secondItem="PXs-zw-7aQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="h31-p9-9bD"/>
-                            <constraint firstItem="PXs-zw-7aQ" firstAttribute="baseline" secondItem="Sf2-jP-9Ts" secondAttribute="baseline" type="default" id="x9x-mt-BeD"/>
+                            <constraint firstItem="Sf2-jP-9Ts" firstAttribute="top" secondItem="lwU-VH-PT0" secondAttribute="top" constant="194" id="j9R-pr-Vxk"/>
+                            <constraint firstItem="PXs-zw-7aQ" firstAttribute="bottom" secondItem="Sf2-jP-9Ts" secondAttribute="bottom" type="default" id="xXc-hs-XEx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="hzR-S6-wcO"/>

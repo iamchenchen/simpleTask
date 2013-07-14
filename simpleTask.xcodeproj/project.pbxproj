@@ -284,10 +284,6 @@
 				3CAECC801791DBDA0000F471 /* iDCAppDelegate.h */,
 				3CAECC811791DBDA0000F471 /* iDCAppDelegate.m */,
 				3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */,
-				3CAECD60179220B20000F471 /* iDCCreateTaskViewController.h */,
-				3CAECD61179220B30000F471 /* iDCCreateTaskViewController.m */,
-				3CAECD5A1792092D0000F471 /* iDCTasksViewController.h */,
-				3CAECD5B1792092D0000F471 /* iDCTasksViewController.m */,
 				3CAECC781791DBDA0000F471 /* Supporting Files */,
 			);
 			path = simpleTask;
@@ -409,6 +405,10 @@
 				3CAECCEC1791EFA10000F471 /* iDCLoginViewController.m */,
 				3CAECD571792026E0000F471 /* iDCSignUpViewController.h */,
 				3CAECD581792026E0000F471 /* iDCSignUpViewController.m */,
+				3CAECD60179220B20000F471 /* iDCCreateTaskViewController.h */,
+				3CAECD61179220B30000F471 /* iDCCreateTaskViewController.m */,
+				3CAECD5A1792092D0000F471 /* iDCTasksViewController.h */,
+				3CAECD5B1792092D0000F471 /* iDCTasksViewController.m */,
 			);
 			name = View;
 			path = ..;
