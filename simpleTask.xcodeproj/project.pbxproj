@@ -13,6 +13,11 @@
 		3C5842811793369800731BEB /* iDCSeettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5842801793369800731BEB /* iDCSeettingViewController.m */; };
 		3C584283179341C600731BEB /* Encouragment-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C584282179341C600731BEB /* Encouragment-1.png */; };
 		3C9735D317934C160032C191 /* iDCTimesUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9735D217934C160032C191 /* iDCTimesUpViewController.m */; };
+		3C9735D51793529B0032C191 /* Failedprogress.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9735D41793529B0032C191 /* Failedprogress.png */; };
+		3C9735D7179354530032C191 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9735D6179354530032C191 /* icon.png */; };
+		3C9735D91793547F0032C191 /* Untitled-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9735D81793547F0032C191 /* Untitled-1-01.png */; };
+		3C9735DB179354860032C191 /* Untitled-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9735DA179354860032C191 /* Untitled-1-01.png */; };
+		3C9735DD179354CC0032C191 /* icon_small-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9735DC179354CC0032C191 /* icon_small-01.png */; };
 		3CAECC721791DBDA0000F471 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC711791DBDA0000F471 /* UIKit.framework */; };
 		3CAECC741791DBDA0000F471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC731791DBDA0000F471 /* Foundation.framework */; };
 		3CAECC761791DBDA0000F471 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC751791DBDA0000F471 /* CoreGraphics.framework */; };
@@ -107,6 +112,11 @@
 		3C584282179341C600731BEB /* Encouragment-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Encouragment-1.png"; sourceTree = "<group>"; };
 		3C9735D117934C160032C191 /* iDCTimesUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCTimesUpViewController.h; path = View/iDCTimesUpViewController.h; sourceTree = SOURCE_ROOT; };
 		3C9735D217934C160032C191 /* iDCTimesUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCTimesUpViewController.m; path = View/iDCTimesUpViewController.m; sourceTree = SOURCE_ROOT; };
+		3C9735D41793529B0032C191 /* Failedprogress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Failedprogress.png; sourceTree = "<group>"; };
+		3C9735D6179354530032C191 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		3C9735D81793547F0032C191 /* Untitled-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-1-01.png"; sourceTree = "<group>"; };
+		3C9735DA179354860032C191 /* Untitled-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-1-01.png"; sourceTree = "<group>"; };
+		3C9735DC179354CC0032C191 /* icon_small-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_small-01.png"; sourceTree = "<group>"; };
 		3CAECC6E1791DBDA0000F471 /* simpleTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAECC711791DBDA0000F471 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3CAECC731791DBDA0000F471 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -286,6 +296,8 @@
 		3CAECC651791DBDA0000F471 = {
 			isa = PBXGroup;
 			children = (
+				3C9735DC179354CC0032C191 /* icon_small-01.png */,
+				3C9735DA179354860032C191 /* Untitled-1-01.png */,
 				3CAECCFC1791F39A0000F471 /* Resources */,
 				3CAECCA11791E2A80000F471 /* StackMob-v2.0.0 */,
 				3CAECC771791DBDA0000F471 /* simpleTask */,
@@ -499,6 +511,8 @@
 		3CAECCFC1791F39A0000F471 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C9735D81793547F0032C191 /* Untitled-1-01.png */,
+				3C9735D6179354530032C191 /* icon.png */,
 				3CAECD981792B30B0000F471 /* task_detail.png */,
 				3CAECD8A1792A5910000F471 /* squid.png */,
 				3CAECD8B1792A5930000F471 /* fish.png */,
@@ -557,6 +571,7 @@
 				3C58427B179334F600731BEB /* setting.png */,
 				3C58427D1793350000731BEB /* Timesup.png */,
 				3C584282179341C600731BEB /* Encouragment-1.png */,
+				3C9735D41793529B0032C191 /* Failedprogress.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -701,6 +716,11 @@
 				3C58427C179334F600731BEB /* setting.png in Resources */,
 				3C58427E1793350000731BEB /* Timesup.png in Resources */,
 				3C584283179341C600731BEB /* Encouragment-1.png in Resources */,
+				3C9735D51793529B0032C191 /* Failedprogress.png in Resources */,
+				3C9735D7179354530032C191 /* icon.png in Resources */,
+				3C9735D91793547F0032C191 /* Untitled-1-01.png in Resources */,
+				3C9735DB179354860032C191 /* Untitled-1-01.png in Resources */,
+				3C9735DD179354CC0032C191 /* icon_small-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,9 +13,7 @@
 @end
 
 @implementation iDCTimesUpViewController
-- (IBAction)back:(id)sender {
-  [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -128,16 +128,11 @@
 {
   Task *task = (Task *)[self.tasks objectAtIndex:indexPath.row];
     NSLog(@"importance %@", task.importance);
-    if (task.importance){
-       cell.backgroundColor = [self greenColor];
-       return;
-    }
-    
     if ([task.importance isEqualToNumber:[NSNumber numberWithInt:1]]) {
     cell.backgroundColor = [self redColor];
     } else if ([task.importance isEqualToNumber:[NSNumber numberWithInt:2]]) {
     cell.backgroundColor = [self yellowColor];
-  } else {
+    } else {
     cell.backgroundColor = [self greenColor];
   }
 }

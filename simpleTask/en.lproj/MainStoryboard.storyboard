@@ -460,7 +460,6 @@
                         <color key="backgroundColor" red="0.92941182851791382" green="0.93333339691162109" blue="0.94117653369903564" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="UW1-Hf-1an" firstAttribute="leading" secondItem="LAF-cU-m9c" secondAttribute="leading" type="default" id="2oz-su-BYf"/>
-                            <constraint firstItem="UW1-Hf-1an" firstAttribute="centerY" secondItem="LAF-cU-m9c" secondAttribute="centerY" type="user" id="5OE-tp-TSv"/>
                             <constraint firstItem="TbA-NF-rUj" firstAttribute="top" secondItem="LAF-cU-m9c" secondAttribute="top" constant="109" id="9hu-jZ-sU7"/>
                             <constraint firstItem="UW1-Hf-1an" firstAttribute="top" secondItem="LAF-cU-m9c" secondAttribute="top" constant="13" type="user" id="JAW-ER-OHN"/>
                             <constraint firstItem="TbA-NF-rUj" firstAttribute="centerX" secondItem="UW1-Hf-1an" secondAttribute="centerX" type="default" id="JqY-C2-aGk"/>
@@ -497,6 +496,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTx-ss-SZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2630" y="2168"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gQA-o2-alZ">
+            <objects>
+                <viewController id="S5g-kB-HqS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vf6-Nc-zfE">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Failedprogress.png" translatesAutoresizingMaskIntoConstraints="NO" id="dAo-DF-rt5">
+                                <color key="backgroundColor" red="0.92941182851791382" green="0.93333339691162109" blue="0.94117653369903564" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dAo-DF-rt5" firstAttribute="bottom" secondItem="Vf6-Nc-zfE" secondAttribute="bottom" type="default" id="Y9C-d7-gPT"/>
+                            <constraint firstItem="dAo-DF-rt5" firstAttribute="top" secondItem="Vf6-Nc-zfE" secondAttribute="top" type="default" id="cxT-MF-kqf"/>
+                            <constraint firstItem="dAo-DF-rt5" firstAttribute="leading" secondItem="Vf6-Nc-zfE" secondAttribute="leading" type="default" id="jGf-iO-Qk4"/>
+                            <constraint firstItem="dAo-DF-rt5" firstAttribute="trailing" secondItem="Vf6-Nc-zfE" secondAttribute="trailing" type="default" id="r6C-1w-nl3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HtT-TH-6r6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9z-4y-52A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3068" y="1559"/>
         </scene>
         <!--IDC Times Up View Controller-->
         <scene sceneID="irz-I7-WbX">
@@ -537,7 +562,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="back:" destination="kBW-k2-Lkd" eventType="touchUpInside" id="Pqb-aB-vXv"/>
+                                    <segue destination="S5g-kB-HqS" kind="push" id="W8t-S5-Atp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -724,6 +749,7 @@
     </scenes>
     <resources>
         <image name="Encouragment-1.png" width="670" height="836"/>
+        <image name="Failedprogress.png" width="646" height="1040"/>
         <image name="Timer.png" width="650" height="1008"/>
         <image name="Timesup.png" width="654" height="919"/>
         <image name="fish.png" width="143" height="143"/>
@@ -787,9 +813,6 @@
         </class>
         <class className="iDCTimesUpViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCTimesUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
