@@ -156,21 +156,32 @@
 
     NSString *taskTitle = self.taskTitle.text;
     NSString *taskDetail = self.taskDetail.text;
-    NSDate *lastDate = self.datePicker.date ;
+    //NSDate *lastDate = self.datePicker.date;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    NSString *dueDate = [dateFormatter stringFromDate:self.datePicker.date];
     //NSNumber self.hour
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSNumber *nHour = [f numberFromString:self.hour];
-    NSNumber *nMin = [f numberFromString:self.mins];
-    NSNumber *totalMiliSec
-    = [NSNumber numberWithInt:([nHour intValue]*60*60*1000 + [nMin intValue]*60*1000)];
+    //NSString *time = (self.hour? self.hour+@"hr:":null)+(self.mins? self.mins+@"mm":null);
+    NSString *sHr,*sMin;
+    if (!self.hour){
+        sHr = [NSString stringWithFormat:@"%@hr",self.hour];
+    }else if(!self.mins){
+        sMin = [NSString stringWithFormat:@"%@mm",self.mins];
+    }
+    //NSString *sHr = [NSString stringWithFormat:@"%@hr",];
+    //NSNumber *nHour = [f numberFromString:self.hour];
+    //NSNumber *nMin = [f numberFromString:self.mins];
+    //NSNumber *totalMiliSec
+    //= [NSNumber numberWithInt:([nHour intValue]*60*60*1000 + [nMin intValue]*60*1000)];
     NSNumber *heat = [NSNumber numberWithInt:(self.importance.selectedSegmentIndex+1)];
     
-    NSLog(@"taskTitle:%@, totalMiliSec:%@ lastDate:%@ importance:%@",taskTitle, totalMiliSec, lastDate, heat);
+    NSLog(@"taskTitle:%@, totalMiliSec:%@ lastDate:%@ importance:%@",taskTitle, sHr, dueDate, heat);
     [newManagedObject setValue:taskTitle forKey:@"title"];
     [newManagedObject setValue:taskDetail forKey:@"detail"];
-    [newManagedObject setValue:lastDate forKey:@"dueDate"];
-    [newManagedObject setValue:totalMiliSec  forKey:@"hoursToFinish"];
+    [newManagedObject setValue:dueDate forKey:@"dueDate"];
+    [newManagedObject setValue:sHr  forKey:@"hoursToFinish"];
     [newManagedObject setValue:heat forKey:@"importance"];
     [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
 
