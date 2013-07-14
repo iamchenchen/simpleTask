@@ -13,10 +13,17 @@
 
 
 @interface iDCCreateTaskViewController ()
-
+@property (nonatomic, strong) UIDatePicker *datePicker;
+//@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+@property (nonatomic, strong) NSArray *hourList;
+@property (nonatomic, strong) NSArray *minuteList;
+@property (nonatomic, strong) NSString *hour;
+@property (nonatomic, strong) NSString *mins;
 @end
 
 @implementation iDCCreateTaskViewController
+
+//@synthesize dateFormatter;
 
 - (iDCAppDelegate *)appDelegate {
     return (iDCAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -25,6 +32,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  //  set duedate today
+  self.hour = @"0 hour";
+  self.mins = @"0 minute";
+  self.hourList = [[NSArray alloc] initWithObjects:@"0 hour", @"1 hour", @"2 hours",@"3 hours",@"4 hours",@"5 hours",@"6 hours",@"7 hours",@"8 hours",@"9 hours",@"10 hours", @"11 hours",@"12 hours",@"13 hours",@"14 hours",@"15 hours",@"16 hours",@"17 hours",@"18 hours",@"19 hours",@"20 hours",@"21 hours",@"22 hours",@"23 hours",@"24 hours", nil];
+  self.minuteList = [[NSArray alloc] initWithObjects:@"0 minute",@"15 minutes",@"30 minutes",@"45 minutes", nil];
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+//  [self.dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+//  [dateFormatter setDateFormat:@"dd.MM.YY"];
+  [self.dueDate setText:[dateFormatter stringFromDate:[NSDate date]]];
+  
   self.taskTitle.delegate = self;
   self.taskDetail.delegate = self;
 	// Do any additional setup after loading the view.
@@ -34,20 +52,57 @@
   self.taskDetail.layer.borderColor = [[UIColor blackColor] CGColor];
   //set date picker
   self.dueDate.userInteractionEnabled = YES;
+  self.hours.userInteractionEnabled = YES;
   UITapGestureRecognizer *tapGesture =
   [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(createDatePicker)];
   [self.dueDate addGestureRecognizer:tapGesture];
-  
-
-}
-
-- (void)labelTap
-{
-  NSLog(@"tapped");
+  tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(createHourPicker)];
+  [self.hours addGestureRecognizer:tapGesture];
 }
 
 - (void) createDatePicker
 {
+  //  testing date picker
+  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:nil
+                                             destructiveButtonTitle:nil
+                                                  otherButtonTitles:nil];
+  
+  [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+  
+  CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
+  
+//  UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
+//  pickerView.showsSelectionIndicator = YES;
+//  pickerView.dataSource = self;
+//  pickerView.delegate = self;
+  
+//  [actionSheet addSubview:pickerView];
+  
+  if(self.datePicker == nil) self.datePicker = [[UIDatePicker alloc] initWithFrame:pickerFrame];
+  [self.datePicker setMinimumDate:[NSDate date]];
+  [self.datePicker setDatePickerMode:UIDatePickerModeDate];
+  [self.datePicker setHidden:NO];
+  [self.datePicker addTarget:self action:@selector(pickerValueChanged:) forControlEvents:UIControlEventValueChanged];
+  [actionSheet addSubview:self.datePicker];
+  
+  UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Close"]];
+  closeButton.momentary = YES;
+  closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
+  closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
+  closeButton.tintColor = [UIColor blackColor];
+  [closeButton addTarget:self action:@selector(dismissActionSheet:) forControlEvents:UIControlEventValueChanged];
+  [actionSheet addSubview:closeButton];
+  
+  [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
+  
+  [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
+}
+
+- (void) createHourPicker
+{
+  NSLog(@"called");
   //  testing date picker
   UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                            delegate:nil
@@ -66,6 +121,13 @@
   
   [actionSheet addSubview:pickerView];
   
+//  if(self.datePicker == nil) self.datePicker = [[UIDatePicker alloc] initWithFrame:pickerFrame];
+//  [self.datePicker setMinimumDate:[NSDate date]];
+//  [self.datePicker setDatePickerMode:UIDatePickerModeDate];
+//  [self.datePicker setHidden:NO];
+//  [self.datePicker addTarget:self action:@selector(pickerValueChanged:) forControlEvents:UIControlEventValueChanged];
+//  [actionSheet addSubview:self.datePicker];
+  
   UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Close"]];
   closeButton.momentary = YES;
   closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
@@ -79,6 +141,13 @@
   [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
 }
 
+
+-(void)pickerValueChanged:(UIDatePicker *)picker{
+  NSLog(@"blah %@", self.datePicker.date.description); // set text to date description
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+  [self.dueDate setText: [dateFormatter stringFromDate: self.datePicker.date]];
+}
 
 - (IBAction)createTask:(UIBarButtonItem *)sender {
 
@@ -126,8 +195,9 @@
 }
 #pragma mark UIPickerView
 
- - (void)dismissActionSheet:(UISegmentedControl*)sender
+ - (void)dismissActionSheet:(UIActionSheet *)sender
 {
+//  NSLog(@"%@", (UIDatePicker *)[sender date]);
    UIActionSheet *actionSheet = (UIActionSheet *)[sender superview]; [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
  }
 
@@ -137,11 +207,37 @@
 }
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-  return 1;
+  if (component == 0) {
+    return [self.hourList count];
+  }
+  return [self.minuteList count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component
+{
+  if (component == 0) {
+    return [self.hourList objectAtIndex:row];
+
+  }
+  return [self.minuteList objectAtIndex:row];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
+      inComponent:(NSInteger)component
+{
+  NSLog(@"called");
+  if (component == 0) {
+    self.hour = [NSString stringWithFormat:@"%@",[self.hourList objectAtIndex:row]];
+  } else {
+    self.mins = [NSString stringWithFormat:@"%@",[self.minuteList objectAtIndex:row]];
+  }
+  NSString *result = [NSString stringWithFormat:@"%@ %@", self.hour, self.mins];
+  [self.hours setText: result];
 }
 //- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 //{
 //  return
 //}
-
 @end

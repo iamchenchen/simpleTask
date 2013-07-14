@@ -11,14 +11,14 @@
 
 @interface iDCCreateTaskViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate, UIActionSheetDelegate>
 
-- (IBAction)createTask:(UIBarButtonItem *)sender;
-
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (weak, nonatomic) IBOutlet UITextField *taskTitle;
 @property (weak, nonatomic) IBOutlet UITextView *taskDetail;
 @property (weak, nonatomic) IBOutlet UILabel *dueDate;
 @property (weak, nonatomic) IBOutlet UILabel *hours;
+
+- (IBAction)createTask:(UIBarButtonItem *)sender;
 
 
 
