@@ -16,7 +16,7 @@
 @property (nonatomic, retain) NSNumber * createddate;
 @property (nonatomic, retain) NSString * detail;
 @property (nonatomic, retain) NSString * dueDate;
-@property (nonatomic, retain) NSString * hoursToFinish;
+@property (nonatomic, retain) NSString * hourToFinish;
 @property (nonatomic, retain) NSNumber * lastmoddate;
 @property (nonatomic, retain) NSString * taskId;
 @property (nonatomic, retain) NSString * title;

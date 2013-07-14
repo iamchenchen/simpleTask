@@ -85,10 +85,12 @@
 		3CAECD7F179292A70000F471 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD7E179292A70000F471 /* logo.png */; };
 		3CAECD81179295BE0000F471 /* navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD80179295BC0000F471 /* navigation.png */; };
 		3CAECD83179296170000F471 /* navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD82179296150000F471 /* navigation.png */; };
-		3CAECD891792A0490000F471 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD881792A0490000F471 /* Task.m */; };
 		3CAECD8D1792A5990000F471 /* squid.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD8A1792A5910000F471 /* squid.png */; };
 		3CAECD8E1792A5990000F471 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD8B1792A5930000F471 /* fish.png */; };
 		3CAECD8F1792A5990000F471 /* whale.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD8C1792A5960000F471 /* whale.png */; };
+		3CAECD911792AC4B0000F471 /* Timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD901792AC490000F471 /* Timer.png */; };
+		3CAECD971792B24A0000F471 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD961792B24A0000F471 /* Task.m */; };
+		3CAECD991792B30E0000F471 /* task_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD981792B30B0000F471 /* task_detail.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,11 +241,13 @@
 		3CAECD7E179292A70000F471 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		3CAECD80179295BC0000F471 /* navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation.png; sourceTree = "<group>"; };
 		3CAECD82179296150000F471 /* navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation.png; sourceTree = "<group>"; };
-		3CAECD871792A0490000F471 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = coredata/Task.h; sourceTree = "<group>"; };
-		3CAECD881792A0490000F471 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = coredata/Task.m; sourceTree = "<group>"; };
 		3CAECD8A1792A5910000F471 /* squid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squid.png; sourceTree = "<group>"; };
 		3CAECD8B1792A5930000F471 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
 		3CAECD8C1792A5960000F471 /* whale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whale.png; sourceTree = "<group>"; };
+		3CAECD901792AC490000F471 /* Timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer.png; sourceTree = "<group>"; };
+		3CAECD951792B24A0000F471 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = coredata/Task.h; sourceTree = "<group>"; };
+		3CAECD961792B24A0000F471 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = coredata/Task.m; sourceTree = "<group>"; };
+		3CAECD981792B30B0000F471 /* task_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task_detail.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,8 +414,8 @@
 		3CAECCDE1791E74E0000F471 /* coredata */ = {
 			isa = PBXGroup;
 			children = (
-				3CAECD871792A0490000F471 /* Task.h */,
-				3CAECD881792A0490000F471 /* Task.m */,
+				3CAECD951792B24A0000F471 /* Task.h */,
+				3CAECD961792B24A0000F471 /* Task.m */,
 				3CAECCDB1791E7460000F471 /* simpleTaskData.xcdatamodeld */,
 				3CAECCE51791ECA90000F471 /* User.h */,
 				3CAECCE61791ECA90000F471 /* User.m */,
@@ -479,6 +483,7 @@
 		3CAECCFC1791F39A0000F471 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CAECD981792B30B0000F471 /* task_detail.png */,
 				3CAECD8A1792A5910000F471 /* squid.png */,
 				3CAECD8B1792A5930000F471 /* fish.png */,
 				3CAECD8C1792A5960000F471 /* whale.png */,
@@ -532,6 +537,7 @@
 				3CAECD271791F39B0000F471 /* sliderMinTrack_.png */,
 				3CAECD281791F39B0000F471 /* sliderThumb.png */,
 				3CAECD291791F39B0000F471 /* sliderThumb@2x.png */,
+				3CAECD901792AC490000F471 /* Timer.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -671,6 +677,8 @@
 				3CAECD8D1792A5990000F471 /* squid.png in Resources */,
 				3CAECD8E1792A5990000F471 /* fish.png in Resources */,
 				3CAECD8F1792A5990000F471 /* whale.png in Resources */,
+				3CAECD911792AC4B0000F471 /* Timer.png in Resources */,
+				3CAECD991792B30E0000F471 /* task_detail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +703,7 @@
 				3CAECD6E17922EC70000F471 /* MBProgressHUD.m in Sources */,
 				3CAECD7117923F7C0000F471 /* iDCTaskListViewController.m in Sources */,
 				3CAECD74179248730000F471 /* iDCTaskDetailViewController.m in Sources */,
-				3CAECD891792A0490000F471 /* Task.m in Sources */,
+				3CAECD971792B24A0000F471 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
