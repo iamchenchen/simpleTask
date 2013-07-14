@@ -127,9 +127,15 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
   Task *task = (Task *)[self.tasks objectAtIndex:indexPath.row];
-  if ([task.importance isEqualToNumber:[NSNumber numberWithInt: 1]]) {
+    NSLog(@"importance %@", task.importance);
+    if (task.importance){
+       cell.backgroundColor = [self greenColor];
+       return;
+    }
+    
+    if ([task.importance isEqualToNumber:[NSNumber numberWithInt:1]]) {
     cell.backgroundColor = [self redColor];
-  } else if ([task.importance isEqualToNumber:[NSNumber numberWithInt:2]]) {
+    } else if ([task.importance isEqualToNumber:[NSNumber numberWithInt:2]]) {
     cell.backgroundColor = [self yellowColor];
   } else {
     cell.backgroundColor = [self greenColor];
