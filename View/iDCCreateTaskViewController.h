@@ -10,7 +10,14 @@
 
 @interface iDCCreateTaskViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *createTask;
+- (IBAction)createTask:(UIBarButtonItem *)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *taskTitle;
+
+@property (weak, nonatomic) IBOutlet UITextField *details;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *priority;
+
 
 
 @end

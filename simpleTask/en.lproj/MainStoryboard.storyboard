@@ -302,10 +302,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rdz-hx-hr7">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="jgD-B2-j8A"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="jgD-B2-j8A">
+                            <connections>
+                                <action selector="createTask:" destination="lHq-Q9-3gs" id="tIU-Ga-zVT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="createTask" destination="jgD-B2-j8A" id="NkO-tW-Er7"/>
+                        <outlet property="details" destination="Tie-Py-9a0" id="56Q-ZY-pCL"/>
+                        <outlet property="priority" destination="8FH-RB-1VN" id="ivo-wf-uIF"/>
+                        <outlet property="taskTitle" destination="J7a-Uv-geu" id="NgH-EH-fla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZV-o5-TUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -364,7 +370,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="iDCCreateTaskViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCCreateTaskViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="createTask" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="createTask:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="details" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="priority" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="taskTitle" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="iDCLoginViewController" superclassName="UIViewController">
