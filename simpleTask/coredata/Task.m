@@ -15,7 +15,7 @@
 @dynamic createddate;
 @dynamic detail;
 @dynamic dueDate;
-@dynamic hoursToFinish;
+@dynamic hourToFinish;
 @dynamic lastmoddate;
 @dynamic taskId;
 @dynamic title;

@@ -106,7 +106,7 @@
   UILabel *title = (UILabel *)[cell viewWithTag:100];
   UILabel *day = (UILabel *)[cell viewWithTag:101];
   title.text = task.title;
-  day.text = [NSString stringWithFormat:@"%@", task.hoursToFinish ];
+  day.text = [NSString stringWithFormat:@"%@", task.hourToFinish];
   title.textColor = [UIColor whiteColor];
   day.textColor = [UIColor whiteColor];
   UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 28.0 ];

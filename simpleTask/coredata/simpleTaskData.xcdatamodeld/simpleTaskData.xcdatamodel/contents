@@ -3,8 +3,8 @@
     <entity name="Task" representedClassName="Task" syncable="YES">
         <attribute name="createddate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dueDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="hoursToFinish" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hourToFinish" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="importance" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="lastmoddate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="taskId" optional="YES" attributeType="String" syncable="YES"/>
