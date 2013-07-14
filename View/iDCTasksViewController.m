@@ -25,24 +25,21 @@
   [iDCAppDelegate logout];
 }
 
-- (void) goToList:(NSNumber *) priority{
-    NSLog(@"Value Clicked: %@",priority);
-
-    iDCTaskListViewController *targetController=[[iDCTaskListViewController alloc]init];
-    targetController.priority=priority;
-    [self.navigationController pushViewController:targetController animated:YES];    
+// This will get called too before the view appears
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([[segue identifier] isEqualToString:@"toList"]) {
+    // Get destination view
+    iDCTaskListViewController *vc = [segue destinationViewController];
+    // Get button tag number (or do whatever you need to do here, based on your object
+    NSInteger tagIndex = [sender tag];
+    // Pass the information to your destination view
+    [vc setSelectedButton:tagIndex];
+  }
 }
 
-- (IBAction)smallTaskAction:(UIButton *)sender {
-    [self goToList:[NSNumber numberWithInt:SMALL_TASK]];
+- (IBAction)toList:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"toList" sender:sender];
 }
 
-- (IBAction)mediumTaskAction:(UIButton *)sender {
-    [self goToList:[NSNumber numberWithInt:MEDIUM_TASK]];
-    
-}
-
-- (IBAction)bigTaskAction:(UIButton *)sender {
-    [self goToList:[NSNumber numberWithInt:BIG_TASK]];
-}
 @end

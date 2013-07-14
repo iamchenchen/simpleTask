@@ -14,11 +14,5 @@
 @property(strong, nonatomic) iDCTaskListViewController *listVC;
 
 
-- (IBAction)smallTaskAction:(UIButton *)sender;
-
-- (IBAction)mediumTaskAction:(UIButton *)sender;
-
-- (IBAction)bigTaskAction:(UIButton *)sender;
-
 
 @end
