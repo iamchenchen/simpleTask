@@ -29,7 +29,11 @@
   /*
    We initialize our refresh control and assign the refreshTable method to get called when the refresh is initiated. Then we initiate the refresh process.
    */
-    
+  UIImage *image = [UIImage imageNamed: @"logo"];
+  UIImageView *imageView = [[UIImageView alloc] initWithImage: image];
+  
+  self.navigationItem.titleView = imageView;
+  
   UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
   [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
   self.refreshControl  = refreshControl;

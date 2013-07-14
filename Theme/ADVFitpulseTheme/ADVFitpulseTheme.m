@@ -24,6 +24,7 @@
 
 - (UIColor *)navigationTextColor {
     return [UIColor colorWithWhite:1.0 alpha:1.0];
+//  return [UIColor colorWithRed:(float)0x48 green:(float)0xbe blue:(float)0xfe alpha:0.00f];
 }
 
 - (UIColor *)highlightColor
@@ -102,6 +103,7 @@
 - (UIImage *)navigationBackgroundForBarMetrics:(UIBarMetrics)metrics
 {
     NSString *name = @"navigationBackground";
+//  NSString *name = @"navigationn";
     if (metrics == UIBarMetricsLandscapePhone) {
         name = [name stringByAppendingString:@"Landscape"];
     }

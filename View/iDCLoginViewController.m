@@ -37,7 +37,7 @@
   
   self.title = @"Login";
   
-  self.loginTableView = [[UITableView alloc] initWithFrame:CGRectMake(16, 50, 294, 110) style:UITableViewStyleGrouped];
+  self.loginTableView = [[UITableView alloc] initWithFrame:CGRectMake(16, 120, 294, 110) style:UITableViewStyleGrouped];
   
   [self.loginTableView setScrollEnabled:NO];
   [self.loginTableView setBackgroundView:nil];
