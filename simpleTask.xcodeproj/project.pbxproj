@@ -12,6 +12,7 @@
 		3C58427E1793350000731BEB /* Timesup.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C58427D1793350000731BEB /* Timesup.png */; };
 		3C5842811793369800731BEB /* iDCSeettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5842801793369800731BEB /* iDCSeettingViewController.m */; };
 		3C584283179341C600731BEB /* Encouragment-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C584282179341C600731BEB /* Encouragment-1.png */; };
+		3C9735D317934C160032C191 /* iDCTimesUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9735D217934C160032C191 /* iDCTimesUpViewController.m */; };
 		3CAECC721791DBDA0000F471 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC711791DBDA0000F471 /* UIKit.framework */; };
 		3CAECC741791DBDA0000F471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC731791DBDA0000F471 /* Foundation.framework */; };
 		3CAECC761791DBDA0000F471 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECC751791DBDA0000F471 /* CoreGraphics.framework */; };
@@ -104,6 +105,8 @@
 		3C58427F1793369800731BEB /* iDCSeettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCSeettingViewController.h; path = View/iDCSeettingViewController.h; sourceTree = SOURCE_ROOT; };
 		3C5842801793369800731BEB /* iDCSeettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCSeettingViewController.m; path = View/iDCSeettingViewController.m; sourceTree = SOURCE_ROOT; };
 		3C584282179341C600731BEB /* Encouragment-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Encouragment-1.png"; sourceTree = "<group>"; };
+		3C9735D117934C160032C191 /* iDCTimesUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCTimesUpViewController.h; path = View/iDCTimesUpViewController.h; sourceTree = SOURCE_ROOT; };
+		3C9735D217934C160032C191 /* iDCTimesUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCTimesUpViewController.m; path = View/iDCTimesUpViewController.m; sourceTree = SOURCE_ROOT; };
 		3CAECC6E1791DBDA0000F471 /* simpleTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAECC711791DBDA0000F471 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3CAECC731791DBDA0000F471 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -325,6 +328,8 @@
 				3CAECC801791DBDA0000F471 /* iDCAppDelegate.h */,
 				3CAECC811791DBDA0000F471 /* iDCAppDelegate.m */,
 				3CAECC891791DBDA0000F471 /* MainStoryboard.storyboard */,
+				3C9735D117934C160032C191 /* iDCTimesUpViewController.h */,
+				3C9735D217934C160032C191 /* iDCTimesUpViewController.m */,
 				3CAECC781791DBDA0000F471 /* Supporting Files */,
 			);
 			path = simpleTask;
@@ -722,6 +727,7 @@
 				3CAECD74179248730000F471 /* iDCTaskDetailViewController.m in Sources */,
 				3CAECD971792B24A0000F471 /* Task.m in Sources */,
 				3C5842811793369800731BEB /* iDCSeettingViewController.m in Sources */,
+				3C9735D317934C160032C191 /* iDCTimesUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +815,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "simpleTask/simpleTask-Prefix.pch";
 				INFOPLIST_FILE = "simpleTask/simpleTask-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/StackMob-v2.0.0\"",
@@ -825,6 +832,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "simpleTask/simpleTask-Prefix.pch";
 				INFOPLIST_FILE = "simpleTask/simpleTask-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/StackMob-v2.0.0\"",
