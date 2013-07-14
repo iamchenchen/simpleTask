@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "MBProgressHUD.h"
+
 
 @class SMClient;
 @class SMCoreDataStore;
@@ -18,5 +20,17 @@
 
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic) SMCoreDataStore *coreDataStore;
+
+//MBProgressHUD
+@property (nonatomic, strong) MBProgressHUD *hud;
+
+/// Returns instance of app delegate (ICanWeightAppDelegate instance).
+/// @returns WeightTrackerAppDelegate instance.
++ (iDCAppDelegate *)instance;
+
++ (void)showProgressView;
++ (void)hideProgressView;
++ (void)hideProgressViewWithComplete: (NSString *)message;
++ (void)showCompleteView:(NSString *) message;
 
 @end

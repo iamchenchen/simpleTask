@@ -26,7 +26,7 @@
 
 @property (strong, nonatomic) SMClient *client;
 
--(IBAction)signUpPressed:(id)sender;
+//-(IBAction)signUpPressed:(id)sender;
 -(IBAction)logInPressed:(id)sender;
 
 

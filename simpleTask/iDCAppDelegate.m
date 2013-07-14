@@ -11,6 +11,7 @@
 //Theme...
 #import "ADVTheme.h"
 
+
 #define STACK_MOB_DEV_PUBLIC_KEY @"e92699ac-7895-4fcd-8e04-a94e9f45e4f8"
 #define STACK_MOB_PRD_PUBLIC_KEY @"28e0d803-dea0-40fc-bdac-1b820d4d5483"
 
@@ -67,5 +68,53 @@
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - MBProgressHUD
+
+/// Returns instance of app delegate (ICanWeightAppDelegate instance).
+/// @returns WeightTrackerAppDelegate instance.
++ (iDCAppDelegate *)instance {
+	return (iDCAppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+
++ (void)showProgressView
+{
+  iDCAppDelegate *appDelegate = [iDCAppDelegate instance];
+  appDelegate.hud = [MBProgressHUD showHUDAddedTo:appDelegate.window animated:YES];
+  appDelegate.hud.labelText = NSLocalizedString(@"Loading", nil);
+  //  [MBProgressHUD showHUDAddedTo:appDelegate.window animated:YES];
+  
+}
+
++ (void)hideProgressView
+{
+  iDCAppDelegate *appDelegate = [iDCAppDelegate instance];
+  [appDelegate.hud hide:YES];
+  //  [MBProgressHUD hideHUDForView:appDelegate.window animated:YES];
+  //  [appDelegate.hud removeFromSuperview];
+}
+
++ (void)hideProgressViewWithComplete: (NSString *)message
+{
+  iDCAppDelegate *appDelegate = [iDCAppDelegate instance];
+  appDelegate.hud.customView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+	appDelegate.hud.mode = MBProgressHUDModeCustomView;
+	appDelegate.hud.labelText = message;
+  //	sleep(1);
+  [appDelegate.hud hide:YES afterDelay:1];
+}
+
++ (void)showCompleteView:(NSString *)message
+{
+  iDCAppDelegate *appDelegate = [iDCAppDelegate instance];
+  appDelegate.hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+  appDelegate.hud.mode = MBProgressHUDModeCustomView;
+	appDelegate.hud.labelText = message;
+  [appDelegate.hud show:YES];
+	[appDelegate.hud hide:YES afterDelay:1];
+}
+
+
 
 @end

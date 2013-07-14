@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o0V-j4-hTc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ur6-GA-lqP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zAB-E0-wHX">
             <objects>
-                <navigationController definesPresentationContext="YES" id="o0V-j4-hTc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LogInNavigation" definesPresentationContext="YES" id="o0V-j4-hTc" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wYV-nU-lv3">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -85,7 +85,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Fin-Km-gkw">
             <objects>
-                <navigationController definesPresentationContext="YES" id="Ur6-GA-lqP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigation" definesPresentationContext="YES" id="Ur6-GA-lqP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iuj-ju-CAO">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -170,14 +170,13 @@
         <!--Table View Controller-->
         <scene sceneID="8II-ZE-Ldw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zTs-CA-mq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="dwl-Yg-nFV" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="A2N-S0-EJQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="o4o-9i-b1a">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="o4o-9i-b1a">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -193,7 +192,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hyQ-oT-CWP">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ijE-gN-AgO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ijE-gN-AgO">
                             <connections>
                                 <segue destination="lHq-Q9-3gs" kind="push" id="vUl-5p-BL1"/>
                             </connections>
@@ -203,6 +202,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTs-CA-mq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1163" y="1559"/>
         </scene>

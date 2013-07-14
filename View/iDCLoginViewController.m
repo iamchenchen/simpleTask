@@ -12,7 +12,6 @@
 #import "StackMob.h"
 #import "iDCSignUpViewController.h"
 
-
 @interface iDCLoginViewController ()
 
 @end
