@@ -435,8 +435,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Timer.png" translatesAutoresizingMaskIntoConstraints="NO" id="UW1-Hf-1an">
                                 <color key="backgroundColor" red="0.9450981021" green="0.9450981021" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="319" id="O6B-Xc-0p0"/>
-                                    <constraint firstAttribute="height" constant="458" id="Umc-Wr-4ee"/>
+                                    <constraint firstAttribute="width" constant="319" id="9Su-Ro-KUm"/>
+                                    <constraint firstAttribute="height" constant="434" type="user" id="Ybc-9G-lWD"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-NF-rUj">
@@ -459,17 +459,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92941182851791382" green="0.93333339691162109" blue="0.94117653369903564" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="TbA-NF-rUj" firstAttribute="leading" secondItem="LAF-cU-m9c" secondAttribute="leading" constant="41" id="BWe-6r-9PG"/>
-                            <constraint firstItem="TbA-NF-rUj" firstAttribute="centerX" secondItem="UW1-Hf-1an" secondAttribute="centerX" type="default" id="dpg-dV-66W"/>
-                            <constraint firstItem="TbA-NF-rUj" firstAttribute="top" secondItem="LAF-cU-m9c" secondAttribute="top" constant="107" id="eiX-qq-CEr"/>
-                            <constraint firstItem="UW1-Hf-1an" firstAttribute="bottom" secondItem="LAF-cU-m9c" secondAttribute="bottom" type="default" id="jJW-gQ-GC1"/>
+                            <constraint firstItem="UW1-Hf-1an" firstAttribute="leading" secondItem="LAF-cU-m9c" secondAttribute="leading" type="default" id="2oz-su-BYf"/>
+                            <constraint firstItem="UW1-Hf-1an" firstAttribute="centerY" secondItem="LAF-cU-m9c" secondAttribute="centerY" type="user" id="5OE-tp-TSv"/>
+                            <constraint firstItem="TbA-NF-rUj" firstAttribute="top" secondItem="LAF-cU-m9c" secondAttribute="top" constant="109" id="9hu-jZ-sU7"/>
+                            <constraint firstItem="UW1-Hf-1an" firstAttribute="top" secondItem="LAF-cU-m9c" secondAttribute="top" constant="13" type="user" id="JAW-ER-OHN"/>
+                            <constraint firstItem="TbA-NF-rUj" firstAttribute="centerX" secondItem="UW1-Hf-1an" secondAttribute="centerX" type="default" id="JqY-C2-aGk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fHh-t3-6Ct"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Mz-XA-bCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2199" y="1559"/>
+            <point key="canvasLocation" x="2207" y="1559"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6fd-Wm-0tK">
@@ -743,9 +744,6 @@
         </class>
         <class className="iDCSeettingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCSeettingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logout:"/>
-            </relationships>
         </class>
         <class className="iDCSignUpViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCSignUpViewController.h"/>
