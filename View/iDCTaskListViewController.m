@@ -103,10 +103,53 @@
    */
   
   Task *task = (Task *)[self.tasks objectAtIndex:indexPath.row];
-  cell.textLabel.text = task.title;
+  UILabel *title = (UILabel *)[cell viewWithTag:100];
+  UILabel *day = (UILabel *)[cell viewWithTag:101];
+  title.text = task.title;
+  day.text = [NSString stringWithFormat:@"%@", task.hoursToFinish ];
+  title.textColor = [UIColor whiteColor];
+  day.textColor = [UIColor whiteColor];
+  UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 28.0 ];
+  title.font = myFont;
+  
+//  cell.textLabel.text = task.title;
+//  cell.textLabel.textColor = [UIColor whiteColor];
+//  cell.detailTextLabel.textColor = [UIColor whiteColor];
+//  UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 28.0 ];
+//  cell.textLabel.font  = myFont;
+
+//  cell.detailTextLabel.text = task.hoursToFinish;
+//  need to fix
+
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  Task *task = (Task *)[self.tasks objectAtIndex:indexPath.row];
+  if ([task.importance isEqualToNumber:[NSNumber numberWithInt: 1]]) {
+    cell.backgroundColor = [self redColor];
+  } else if ([task.importance isEqualToNumber:[NSNumber numberWithInt:2]]) {
+    cell.backgroundColor = [self yellowColor];
+  } else {
+    cell.backgroundColor = [self greenColor];
+  }
+}
+
+- (UIColor *)redColor
+{
+  return [UIColor colorWithRed:(float)0xe6/255.0 green:(float)0x56/255.0 blue:(float)0x7a/255.0 alpha:1.00f];
+}
+
+- (UIColor *)yellowColor
+{
+  return [UIColor colorWithRed:(float)0xea/255.0 green:(float)0xc1/255.0 blue:(float)0x4d/255.0 alpha:1.00f];
+}
+
+- (UIColor *)greenColor
+{
+  return [UIColor colorWithRed:(float)0x5b/255.0 green:(float)0xd9/255.0 blue:(float)0x99/255.0 alpha:1.00f];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

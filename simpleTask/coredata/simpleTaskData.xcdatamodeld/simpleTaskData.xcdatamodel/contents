@@ -5,6 +5,7 @@
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dueDate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="hoursToFinish" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="importance" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="lastmoddate" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="taskId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,7 +16,7 @@
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="whoOwn" inverseEntity="Task" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Task" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Task" positionX="160" positionY="192" width="128" height="180"/>
         <element name="User" positionX="-65" positionY="224" width="128" height="73"/>
     </elements>
 </model>

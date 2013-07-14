@@ -28,7 +28,7 @@
   id <ADVTheme> theme = [ADVThemeManager sharedTheme];
   
   
-  self.title = @"Login";
+//  self.title = @"Login";
   
   self.loginTableView = [[UITableView alloc] initWithFrame:CGRectMake(16, 50, 294, 110) style:UITableViewStyleGrouped];
   
