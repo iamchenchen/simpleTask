@@ -74,7 +74,6 @@
 		3CAECD561791F39B0000F471 /* sliderThumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD291791F39B0000F471 /* sliderThumb@2x.png */; };
 		3CAECD591792026E0000F471 /* iDCSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD581792026E0000F471 /* iDCSignUpViewController.m */; };
 		3CAECD5C1792092D0000F471 /* iDCTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD5B1792092D0000F471 /* iDCTasksViewController.m */; };
-		3CAECD5F179214720000F471 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD5E179214720000F471 /* Task.m */; };
 		3CAECD62179220B30000F471 /* iDCCreateTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD61179220B30000F471 /* iDCCreateTaskViewController.m */; };
 		3CAECD6817922C2A0000F471 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAECD6717922C2A0000F471 /* QuartzCore.framework */; };
 		3CAECD6C17922D410000F471 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CAECD6A17922D410000F471 /* 37x-Checkmark.png */; };
@@ -82,6 +81,7 @@
 		3CAECD6E17922EC70000F471 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD6617922A600000F471 /* MBProgressHUD.m */; };
 		3CAECD7117923F7C0000F471 /* iDCTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD7017923F7C0000F471 /* iDCTaskListViewController.m */; };
 		3CAECD74179248730000F471 /* iDCTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD73179248730000F471 /* iDCTaskDetailViewController.m */; };
+		3CAECD771792547E0000F471 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAECD761792547E0000F471 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -217,8 +217,6 @@
 		3CAECD581792026E0000F471 /* iDCSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCSignUpViewController.m; path = View/iDCSignUpViewController.m; sourceTree = "<group>"; };
 		3CAECD5A1792092D0000F471 /* iDCTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCTasksViewController.h; path = View/iDCTasksViewController.h; sourceTree = SOURCE_ROOT; };
 		3CAECD5B1792092D0000F471 /* iDCTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCTasksViewController.m; path = View/iDCTasksViewController.m; sourceTree = SOURCE_ROOT; };
-		3CAECD5D179214720000F471 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = coredata/Task.h; sourceTree = "<group>"; };
-		3CAECD5E179214720000F471 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = coredata/Task.m; sourceTree = "<group>"; };
 		3CAECD60179220B20000F471 /* iDCCreateTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCCreateTaskViewController.h; path = View/iDCCreateTaskViewController.h; sourceTree = SOURCE_ROOT; };
 		3CAECD61179220B30000F471 /* iDCCreateTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCCreateTaskViewController.m; path = View/iDCCreateTaskViewController.m; sourceTree = SOURCE_ROOT; };
 		3CAECD6517922A600000F471 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = helpers/MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
@@ -230,6 +228,8 @@
 		3CAECD7017923F7C0000F471 /* iDCTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCTaskListViewController.m; path = View/iDCTaskListViewController.m; sourceTree = SOURCE_ROOT; };
 		3CAECD72179248730000F471 /* iDCTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iDCTaskDetailViewController.h; path = View/iDCTaskDetailViewController.h; sourceTree = SOURCE_ROOT; };
 		3CAECD73179248730000F471 /* iDCTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iDCTaskDetailViewController.m; path = View/iDCTaskDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		3CAECD751792547E0000F471 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = coredata/Task.h; sourceTree = "<group>"; };
+		3CAECD761792547E0000F471 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = coredata/Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,9 +396,9 @@
 		3CAECCDE1791E74E0000F471 /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				3CAECD751792547E0000F471 /* Task.h */,
+				3CAECD761792547E0000F471 /* Task.m */,
 				3CAECCDB1791E7460000F471 /* simpleTaskData.xcdatamodeld */,
-				3CAECD5D179214720000F471 /* Task.h */,
-				3CAECD5E179214720000F471 /* Task.m */,
 				3CAECCE51791ECA90000F471 /* User.h */,
 				3CAECCE61791ECA90000F471 /* User.m */,
 			);
@@ -663,11 +663,11 @@
 				3CAECCFB1791F2BC0000F471 /* ADVTheme.m in Sources */,
 				3CAECD591792026E0000F471 /* iDCSignUpViewController.m in Sources */,
 				3CAECD5C1792092D0000F471 /* iDCTasksViewController.m in Sources */,
-				3CAECD5F179214720000F471 /* Task.m in Sources */,
 				3CAECD62179220B30000F471 /* iDCCreateTaskViewController.m in Sources */,
 				3CAECD6E17922EC70000F471 /* MBProgressHUD.m in Sources */,
 				3CAECD7117923F7C0000F471 /* iDCTaskListViewController.m in Sources */,
 				3CAECD74179248730000F471 /* iDCTaskDetailViewController.m in Sources */,
+				3CAECD771792547E0000F471 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
