@@ -12,6 +12,7 @@
 
 
 @class SMClient;
+@class SMPushClient;
 @class SMCoreDataStore;
 
 @interface iDCAppDelegate : UIResponder <UIApplicationDelegate>

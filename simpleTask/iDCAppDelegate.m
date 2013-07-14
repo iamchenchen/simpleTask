@@ -8,6 +8,7 @@
 
 #import "iDCAppDelegate.h"
 #import "StackMob.h"
+#import "SMPushClient.h"
 
 #import "ADVTheme.h" //theme
 
@@ -20,6 +21,7 @@
 @interface iDCAppDelegate ()
 
 @property (strong, nonatomic) SMClient *client;
+@property (strong, nonatomic) SMPushClient *pushClient;
 @end
 
 @implementation iDCAppDelegate
@@ -29,9 +31,57 @@
   [ADVThemeManager customizeAppAppearance];
   
   self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:STACK_MOB_DEV_PUBLIC_KEY];
+  self.pushClient = [[SMPushClient alloc] initWithAPIVersion:@"0" publicKey:STACK_MOB_DEV_PUBLIC_KEY privateKey:STACK_MOB_PRD_PUBLIC_KEY];
+    
   self.coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
+  [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert];
+    
   [self signInChecker];
   return YES;
+}
+
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    
+    NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    token = [[token componentsSeparatedByString:@" "] componentsJoinedByString:@""];
+    
+    // Persist token if needed
+    
+    // Register the token with StackMob.  User is an arbitrary string to associate with the token.
+    [self.pushClient registerDeviceToken:token withUser:@"Person123" onSuccess:^{
+        // Successful registration
+        NSLog(@"Successfully registered");
+    } onFailure:^(NSError *error) {
+        // Error
+        NSLog(@"Push Registration faild");
+    }];
+}
+
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    // Error in registration
+    NSLog(@"Failed to register:%@",err);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    
+    // Here's an example of displaying an alert with the push message
+    UIApplicationState state = [application applicationState];
+    if (state == UIApplicationStateActive) {
+        NSString *cancelTitle = @"Close";
+        NSString *showTitle = @"Show";
+        NSString *message = [[userInfo valueForKey:@"aps"] valueForKey:@"alert"];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"StackMob Message"
+                                                            message:message
+                                                           delegate:self
+                                                  cancelButtonTitle:cancelTitle
+                                                  otherButtonTitles:showTitle, nil];
+        [alertView show];
+        
+    } else {
+        //Do stuff that you would do if the application was not active
+    }
 }
 
 - (NSManagedObjectModel *)managedObjectModel
