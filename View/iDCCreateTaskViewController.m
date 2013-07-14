@@ -7,6 +7,7 @@
 //
 
 #import "iDCCreateTaskViewController.h"
+#import "Task.h"
 
 @interface iDCCreateTaskViewController ()
 
@@ -21,6 +22,13 @@
 }
 
 - (IBAction)createTask:(UIBarButtonItem *)sender {
+
+    NSString *taskTitle = self.taskTitle.text;
+    NSString *taskDetail = self.details.text;
+    
+    NSLog(@"taskTitle:%@, taskDetail:%@",taskTitle, taskDetail);
+    
     
 }
+
 @end
