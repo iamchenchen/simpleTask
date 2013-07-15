@@ -790,6 +790,9 @@
         </class>
         <class className="iDCSeettingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCSeettingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logout:"/>
+            </relationships>
         </class>
         <class className="iDCSignUpViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iDCSignUpViewController.h"/>
